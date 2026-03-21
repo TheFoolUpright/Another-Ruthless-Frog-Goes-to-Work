@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b18c5f48905834e4994b6ae42823881c
+guid: a1c311b071224414d927ca18b142a623
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4601445728064129104
-    second: ReputationBarBackground_0
+      213: 3639650524055953064
+    second: DispatchButton_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ReputationBarBackground_0
+      name: DispatchButton_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 15
-        width: 950
-        height: 67
+        y: 0
+        width: 236
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 058408a928e9bdf30800000000000000
-      internalID: 4601445728064129104
+      spriteID: 8ae5be03ed2a28230800000000000000
+      internalID: 3639650524055953064
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ReputationBarBackground_0: 4601445728064129104
+      DispatchButton_0: 3639650524055953064
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b18c5f48905834e4994b6ae42823881c
+guid: faf460c80d02ac74287aa98616d7ff6a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4601445728064129104
-    second: ReputationBarBackground_0
+      213: -6798735432481647835
+    second: UIDarkStar_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ReputationBarBackground_0
+      name: UIDarkStar_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 15
-        width: 950
-        height: 67
+        y: 0
+        width: 41
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 058408a928e9bdf30800000000000000
-      internalID: 4601445728064129104
+      spriteID: 523d119352a06a1a0800000000000000
+      internalID: -6798735432481647835
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ReputationBarBackground_0: 4601445728064129104
+      UIDarkStar_0: -6798735432481647835
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

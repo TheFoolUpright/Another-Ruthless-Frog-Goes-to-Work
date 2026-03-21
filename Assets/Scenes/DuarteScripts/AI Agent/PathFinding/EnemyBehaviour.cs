@@ -6,7 +6,7 @@ using Unity.VisualScripting;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    [SerializeField] Transform _target;
+    [SerializeField] private Transform _target;
     NavMeshAgent _agent;
     private StateMachine _stateMachine;
 
@@ -20,17 +20,16 @@ public class EnemyBehaviour : MonoBehaviour
         var states = new Dictionary<Type, BaseState>()
         {
             {
-                typeof(onMission), new onMission(gameObject, _agent)
-            },
-            {
                 typeof(onTravel), new onTravel(gameObject, _agent, _target)
             },
             {
-                typeof(onHQ), new onHQ(gameObject, _target)
+                typeof(onMission), new onMission(gameObject, _agent)
             },
             {
-                typeof(onRest), new onRest(gameObject)
+                typeof(onHQ), new onHQ(gameObject, _target)
             }
         };
+
+        _stateMachine.SetStates(states);
     }
 }
