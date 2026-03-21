@@ -9,8 +9,13 @@ public class MissionGenerator : MonoBehaviour
     [SerializeField] private ZoneScriptableObject zone;
     [SerializeField] private MissionsScriptableObject mission;
     [SerializeField] private MissionController missionController;
+    [SerializeField] private ZoneController zoneController;
+    public Transform[] missionWaypoints;
+    public bool[] waypointOccupied;
     private float reputationFactor;
     private float missionGenerationTimer;
+    private float missionGenerationTime;
+    private float reputationEffectOnMissionCount;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,24 +26,44 @@ public class MissionGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        reputationEffectOnMissionCount = Mathf.FloorToInt(zoneController.globalReputation / 5f);
+        if (missionController.activeMissionList.Count == 2 + reputationEffectOnMissionCount)
+        {
+            missionGenerationTimer = missionGenerationTime;
+            return;
+        }
+
         if (missionGenerationTimer >= 0)
         {
             missionGenerationTimer -= Time.deltaTime;
         }
         else
         {
-            DetermineMissionPosition();
+            if (!DetermineMissionPosition())
+            {
+                return;
+            }
             CalculateMissionDanger();
             DetermineSpecificMission();
+            missionGenerationTimer = missionGenerationTime;
         }
-
     }
 
-    void DetermineMissionPosition()
+    private bool DetermineMissionPosition()
     {
-        var random = new System.Random();
-        int index = zone.zoneMissionWaypoints.Count;
-        mission.missionPosition = (zone.zoneMissionWaypoints[index]);
+        for (int i = 0; i < waypointOccupied.Length; i++)
+        {
+            if (!waypointOccupied[i])
+            {
+                mission.missionPosition = missionWaypoints[i];
+                return true;
+            }
+            else if (i == waypointOccupied.Length - 1)
+            {
+                return false;
+            }
+        }
+        return false;
     }
 
     void CalculateMissionDanger()
@@ -47,16 +72,16 @@ public class MissionGenerator : MonoBehaviour
         switch (zone.zoneDangerLevel)
         {
             case 0:
-                mission.missionDangerLevel = Mathf.RoundToInt(NextGaussian(0 + reputationFactor, 4, -0.5f, 3.49f));
+                mission.missionDangerLevel = Mathf.FloorToInt(NextGaussian(0 + reputationFactor, 4, 0f, 4.9f));
                 break;
             case 1:
-                mission.missionDangerLevel = Mathf.RoundToInt(NextGaussian(1 + reputationFactor, 4, -0.5f, 3.49f));
+                mission.missionDangerLevel = Mathf.FloorToInt(NextGaussian(1 + reputationFactor, 4, 0f, 4.9f));
                 break;
             case 2:
-                mission.missionDangerLevel = Mathf.RoundToInt(NextGaussian(2 + reputationFactor, 4, -0.5f, 3.49f));
+                mission.missionDangerLevel = Mathf.FloorToInt(NextGaussian(2 + reputationFactor, 4, 0f, 4.9f));
                 break;
             case 3:
-                mission.missionDangerLevel = Mathf.RoundToInt(NextGaussian(3 + reputationFactor, 4, -0.5f, 3.49f));
+                mission.missionDangerLevel = Mathf.FloorToInt(NextGaussian(3 + reputationFactor, 4, 0f, 4.9f));
                 break;
         }
     }

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fff8c1a8310f21e4da54d8428f9be38e, type: 3}
   m_Name: Zone0
   m_EditorClassIdentifier: Assembly-CSharp::ZoneScriptableObject
-  dangerLevel: 0
-  currentReputation: 80
-  missionWaypoints: []
+  zoneDangerLevel: 0
+  zoneReputation: 0
+  zoneMissionGenerationTime: 60

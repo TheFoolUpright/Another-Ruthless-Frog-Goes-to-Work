@@ -1,10 +1,8 @@
 using UnityEngine;
 
-public class Zone : MonoBehaviour
+public class ZoneController : MonoBehaviour
 {
-    [SerializeField] private ZoneScriptableObject zoneScript;
-    
-
+    public int globalReputation;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,6 +12,6 @@ public class Zone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 }

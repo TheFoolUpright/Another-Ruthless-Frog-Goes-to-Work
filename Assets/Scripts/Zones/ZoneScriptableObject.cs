@@ -7,7 +7,6 @@ public class ZoneScriptableObject : ScriptableObject
     public float zoneDangerLevel;
     public float zoneReputation;
     public float zoneMissionGenerationTime; //seconds
-    public List<Transform> zoneMissionWaypoints;
 
     private void Awake()
     {
