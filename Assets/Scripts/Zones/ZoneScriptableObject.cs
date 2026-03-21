@@ -6,6 +6,29 @@ public class ZoneScriptableObject : ScriptableObject
 {
     public float zoneDangerLevel;
     public float zoneReputation;
-    public float zoneMissionCooldown;
+    public float zoneMissionGenerationTime; //seconds
     public List<Transform> zoneMissionWaypoints;
+
+    private void Awake()
+    {
+        switch (zoneDangerLevel)
+        {
+            case 0:
+                zoneMissionGenerationTime = 60;
+                break;
+            case 1:
+                zoneMissionGenerationTime = 40;
+                break;
+            case 2:
+                zoneMissionGenerationTime = 30;
+
+                break;
+            case 3:
+                zoneMissionGenerationTime = 20;
+                break;
+            default:
+                Debug.Log("Zone Danger Miss-Assigned");
+                break;
+        }
+    }
 }
