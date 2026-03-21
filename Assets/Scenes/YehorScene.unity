@@ -3301,7 +3301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb1d11fb214e3f54195667364e0b5d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UITextReputation
-  zoneData: {fileID: 11400000, guid: 87d6a6f26eea011408c81e1f8c8bcbb0, type: 2}
+  zonePrefab: {fileID: 8804193596186759473, guid: ce21d335eae66de49b73a8c865b4dd21, type: 3}
   reputationText: {fileID: 347637098}
 --- !u!114 &347637098
 MonoBehaviour:
@@ -13899,7 +13899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb1d11fb214e3f54195667364e0b5d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UITextReputation
-  zoneData: {fileID: 11400000, guid: faeaaf6d88d27b64f8d0a916d52f2a49, type: 2}
+  zonePrefab: {fileID: 4192785571026833251, guid: 30f9d0d1d0802624eb081ecd821544cc, type: 3}
   reputationText: {fileID: 1502982538}
 --- !u!114 &1502982538
 MonoBehaviour:
@@ -16948,7 +16948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb1d11fb214e3f54195667364e0b5d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UITextReputation
-  zoneData: {fileID: 11400000, guid: 689744daba5285f40aac7ac763d760f8, type: 2}
+  zonePrefab: {fileID: 5606454629113765115, guid: 48fa7dc1c72a59e4d9afe5b83b4dba05, type: 3}
   reputationText: {fileID: 1864908664}
 --- !u!114 &1864908664
 MonoBehaviour:
@@ -17316,7 +17316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb1d11fb214e3f54195667364e0b5d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UITextReputation
-  zoneData: {fileID: 11400000, guid: 0f5af9ca9ae17594ca484594286a50fb, type: 2}
+  zonePrefab: {fileID: 1548276342823129954, guid: 13187b28ea0939a4b87edf1e9ead489a, type: 3}
   reputationText: {fileID: 1881462639}
 --- !u!114 &1881462639
 MonoBehaviour:

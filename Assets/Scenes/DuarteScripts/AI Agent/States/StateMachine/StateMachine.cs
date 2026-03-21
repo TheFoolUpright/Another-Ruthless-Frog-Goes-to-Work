@@ -8,7 +8,7 @@ public class StateMachine : MonoBehaviour
     private Dictionary<Type, BaseState> _states;
     public BaseState CurrentState { get; private set; }
 
-    [SerializeField] private string currentStateName;
+    [SerializeField] public string currentStateName;
 
     public void SetStates(Dictionary<Type, BaseState> states)
     {

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7440398417935782155}
   - component: {fileID: 5293067543326545096}
   - component: {fileID: 8024667584682210511}
-  - component: {fileID: 3895478189518721115}
+  - component: {fileID: 6097126170072167400}
   m_Layer: 0
   m_Name: PigWorld
   m_TagString: Untagged
@@ -115,7 +115,7 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &3895478189518721115
+--- !u!114 &6097126170072167400
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,7 +124,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1237674182397463553}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0eb4c588220d194b9fcbfe2df1a4970, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f81fa91b7faccf4dbf29273d9b51288, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyBehaviour
-  _target: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::PigWorld
+  debugMission: {fileID: 0}
+  debugPigData: {fileID: 11400000, guid: 59eb64efc491a234aa4ee94faf3d743d, type: 2}
