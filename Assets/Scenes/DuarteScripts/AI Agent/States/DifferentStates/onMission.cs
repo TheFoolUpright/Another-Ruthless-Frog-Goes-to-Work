@@ -23,9 +23,11 @@ public class onMission : BaseState
     {
         _agent.enabled = true;
     }
-    
+
     public override Type Tick()
     {
+        _timer += Time.deltaTime; // This line is missing in your current file!
+
         if (_timer >= 10f)
         {
             return typeof(onTravel);
