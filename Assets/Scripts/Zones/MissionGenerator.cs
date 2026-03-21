@@ -5,7 +5,7 @@ public class MissionGenerator : MonoBehaviour
 {
     [SerializeField] private MissionController missionController;
     [SerializeField] private ZoneController zoneController;
-    [SerializeField] private ZoneScriptableObject zone;
+    [SerializeField] public ZoneScriptableObject zone;
     [SerializeField] private GameObject missionPrefab;
     [SerializeField] private float reputationEffectOnMissionCount;
     [SerializeField] private float missionGenerationTimer;
