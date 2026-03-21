@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d12dee1632e5548419249056ef219893, type: 3}
   m_Name: Traffic
   m_EditorClassIdentifier: Assembly-CSharp::MissionsScriptableObject
-  title: 
-  description: 
-  image: {fileID: 0}
-  dangerLevel: 1
-  popUpCooldown: 0
+  missionTitle: 
+  missionDescription: 
+  missionImage: {fileID: 0}
+  missionDangerLevel: 1
+  missionPopUpCooldown: 6
   missionCompletionTime: 0
-  professionalismRequirement: 0
+  missionProfessionalismRequirement: 6

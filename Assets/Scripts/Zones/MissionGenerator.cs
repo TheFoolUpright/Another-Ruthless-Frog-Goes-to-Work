@@ -10,25 +10,27 @@ public class MissionGenerator : MonoBehaviour
     [SerializeField] private float reputationEffectOnMissionCount;
     [SerializeField] private float missionGenerationTimer;
     [SerializeField] private float reputationFactor;
+
     public Transform[] missionWaypoints;
     public bool[] waypointOccupied;
+
     private int missionDangerLevel;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         waypointOccupied = new bool[missionWaypoints.Length];
         missionGenerationTimer = zone.zoneMissionGenerationTime;
+
         for (int i = 0; i < waypointOccupied.Length; i++)
         {
             waypointOccupied[i] = false;
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         reputationEffectOnMissionCount = Mathf.FloorToInt(zoneController.globalReputation / 5f);
+
         if (missionController.activeMissionList.Count == 2 + reputationEffectOnMissionCount)
         {
             missionGenerationTimer = zone.zoneMissionGenerationTime;
@@ -41,65 +43,74 @@ public class MissionGenerator : MonoBehaviour
         }
         else
         {
-            if (!CheckForAvailablePosition())
+            int waypointIndex = GetFreeWaypointIndex();
+
+            if (waypointIndex == -1)
             {
                 return;
             }
+
             CalculateMissionDanger();
-            DetermineMissionPosition();
+            SpawnMissionAtWaypoint(waypointIndex);
             missionGenerationTimer = zone.zoneMissionGenerationTime;
         }
     }
 
-    private bool CheckForAvailablePosition()
+    private int GetFreeWaypointIndex()
     {
         for (int i = 0; i < waypointOccupied.Length; i++)
         {
             if (!waypointOccupied[i])
             {
                 waypointOccupied[i] = true;
-                return true;
-            }
-            else if (i == waypointOccupied.Length - 1)
-            {
-                return false;
+                return i;
             }
         }
-        return false;
+
+        return -1;
     }
 
     void CalculateMissionDanger()
     {
-        reputationFactor = (5 - zone.zoneReputation) / 10;
+        reputationFactor = (5 - zone.zoneReputation) / 10f;
+
         switch (zone.zoneDangerLevel)
         {
             case 0:
                 missionDangerLevel = Mathf.FloorToInt(NextGaussian(0 + reputationFactor, 4, 0f, 4.9f));
                 break;
+
             case 1:
                 missionDangerLevel = Mathf.FloorToInt(NextGaussian(1 + reputationFactor, 4, 0f, 4.9f));
                 break;
+
             case 2:
                 missionDangerLevel = Mathf.FloorToInt(NextGaussian(2 + reputationFactor, 4, 0f, 4.9f));
                 break;
+
             case 3:
                 missionDangerLevel = Mathf.FloorToInt(NextGaussian(3 + reputationFactor, 4, 0f, 4.9f));
+                break;
+
+            default:
+                missionDangerLevel = 0;
                 break;
         }
     }
 
-    void DetermineMissionPosition()
+    void SpawnMissionAtWaypoint(int index)
     {
-        for (int i = 0; i < waypointOccupied.Length; i++)
-        {
-            if (!waypointOccupied[i])
-            {
-                GameObject mission = Instantiate(missionPrefab);
-                mission.GetComponent<MissionInfo>().missionDangerLevel = missionDangerLevel;
-                mission.GetComponent<MissionInfo>().missionController = missionController;
-                mission.GetComponent<MissionInfo>().missionGenerator = this;
-                mission.transform.position = new Vector2(missionWaypoints[i].position.x, missionWaypoints[i].position.y);
-            }
-        }
+        GameObject mission = Instantiate(missionPrefab);
+
+        MissionInfo missionInfo = mission.GetComponent<MissionInfo>();
+
+        missionInfo.missionDangerLevel = missionDangerLevel;
+        missionInfo.missionController = missionController;
+        missionInfo.missionGenerator = this.GetComponent<MissionGenerator>();
+
+        mission.transform.position = new Vector2(
+            missionWaypoints[index].position.x,
+            missionWaypoints[index].position.y
+        );
     }
 }

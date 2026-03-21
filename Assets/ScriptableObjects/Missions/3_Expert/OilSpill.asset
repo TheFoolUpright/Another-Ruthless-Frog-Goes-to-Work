@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d12dee1632e5548419249056ef219893, type: 3}
   m_Name: OilSpill
   m_EditorClassIdentifier: Assembly-CSharp::MissionsScriptableObject
-  title: 
-  description: 
-  image: {fileID: 0}
-  dangerLevel: 3
-  popUpCooldown: 0
-  missionCompletionTime: 0
-  professionalismRequirement: 0
+  missionTitle: 
+  missionDescription: 
+  missionImage: {fileID: 0}
+  missionDangerLevel: 3
+  missionPopUpCooldown: 12
+  missionCompletionTime: 6
+  missionProfessionalismRequirement: 11
