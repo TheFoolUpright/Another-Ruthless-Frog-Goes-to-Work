@@ -3,13 +3,26 @@ using UnityEngine.UIElements;
 
 public class Pig : MonoBehaviour
 {
-    [SerializeField] private PigsScriptableObject pig;
-    [SerializeField] private Image pigImage;
-    [SerializeField] private Image pigRank;
-    [SerializeField] private float pigStamina;
+    public PigsScriptableObject data;
+    public float currentStamina;
 
-    private void Start()
+    [SerializeField] private Image pigImage;
+    [SerializeField] private Image pigRankImage;
+
+    public void Initialize(PigsScriptableObject pigData)
     {
-        
+        data = pigData;
+        currentStamina = pigData.GetStamina();
+
+        // TODO: Setup visuals here
+    }
+
+    private void UpdateVisuals()
+    {
+        // Set pig portrait
+        pigImage.sprite = data.GetImage();
+
+        // Set rank image
+        pigRankImage.sprite = RankController.Instance.GetRankSprite(data.GetProfessionalism());
     }
 }

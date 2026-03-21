@@ -44,8 +44,6 @@ public class PigDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         if (dropSlot != null)
         {
             
-
-
             if(dropSlot.currentPig != null)
             {
                 //Swap Pigs
