@@ -27,6 +27,9 @@ public class EnemyBehaviour : MonoBehaviour
             },
             {
                 typeof(onHQ), new onHQ(gameObject, _target)
+            },
+            {
+                typeof(onRest), new onRest(gameObject)
             }
         };
     }
