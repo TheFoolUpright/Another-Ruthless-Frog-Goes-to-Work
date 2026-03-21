@@ -1,16 +1,20 @@
+using System;
 using UnityEngine;
 
-public class onRest : MonoBehaviour
+public class onRest : BaseState
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public onRest(GameObject gameObject) : base(gameObject)
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public override Type Tick()
     {
+        //if (gameObject.stamina >= 3 &&)
+        //{
+        //    return typeof(onHQ);
+        //}
         
+        return typeof(onRest);
     }
 }
