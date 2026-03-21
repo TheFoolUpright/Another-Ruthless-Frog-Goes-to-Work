@@ -21,18 +21,13 @@ public class EnemyBehaviour : MonoBehaviour
         {
             {
                 typeof(onMission), new onMission(gameObject, _agent)
+            },
+            {
+                typeof(onTravel), new onTravel(gameObject, _agent, _target)
+            },
+            {
+                typeof(onHQ), new onHQ(gameObject, _target)
             }
         };
-    }
-
-
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-        _agent.SetDestination(_target.position);
     }
 }

@@ -1,16 +1,22 @@
+using System;
 using UnityEngine;
 
-public class onHQ : MonoBehaviour
+public class onHQ : BaseState
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private float _timer;
+    private Transform _mission;
+
+    public onHQ(GameObject gameobject, Transform target) : base(gameobject)
     {
-        
+        _mission = target;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override Type Tick()
     {
-        
+        if (_mission != null)
+        {
+            return typeof(onTravel);
+        }
+        return typeof(onHQ);
     }
 }

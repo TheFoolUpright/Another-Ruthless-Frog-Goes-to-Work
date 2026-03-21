@@ -8,7 +8,7 @@ public class onTravel : BaseState
     private Transform _target;
     private Transform _HQ;
     
-    public onTravel(GameObject gameObject, NavMeshAgent agent, Transform target, float travelspeed) : base(gameObject)
+    public onTravel(GameObject gameObject, NavMeshAgent agent, Transform target) : base(gameObject)
     {
         _agent = agent;
         _target = target;
