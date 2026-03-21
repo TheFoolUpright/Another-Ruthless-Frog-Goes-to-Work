@@ -256,12 +256,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782a0de958193bd47a1854d4fdbe0fd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  zone: {fileID: 11400000, guid: 0f5af9ca9ae17594ca484594286a50fb, type: 2}
+  zone: {fileID: 11400000, guid: 87d6a6f26eea011408c81e1f8c8bcbb0, type: 2}
   mission: {fileID: 0}
   missionController: {fileID: 2145032501}
   zoneController: {fileID: 1548834625}
-  missionWaypoints: []
+  missionWaypoints:
+  - {fileID: 1765116466}
+  - {fileID: 297184996}
+  - {fileID: 214772609}
+  - {fileID: 1941980056}
   waypointOccupied: 
+  reputationFactor: 0
+  missionGenerationTimer: 0
+  missionGenerationTime: 0
+  reputationEffectOnMissionCount: 0
 --- !u!4 &19222507
 Transform:
   m_ObjectHideFlags: 0
@@ -738,7 +746,7 @@ Transform:
   m_GameObject: {fileID: 214772608}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.22, y: 1.53, z: 0}
+  m_LocalPosition: {x: 1.55, y: 1.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -881,12 +889,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782a0de958193bd47a1854d4fdbe0fd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  zone: {fileID: 11400000, guid: 0f5af9ca9ae17594ca484594286a50fb, type: 2}
+  zone: {fileID: 11400000, guid: 689744daba5285f40aac7ac763d760f8, type: 2}
   mission: {fileID: 0}
   missionController: {fileID: 2145032501}
   zoneController: {fileID: 1548834625}
-  missionWaypoints: []
+  missionWaypoints:
+  - {fileID: 1493786924}
+  - {fileID: 2112625092}
+  - {fileID: 412659836}
   waypointOccupied: 
+  reputationFactor: 0
+  missionGenerationTimer: 0
+  missionGenerationTime: 0
+  reputationEffectOnMissionCount: 0
 --- !u!4 &239299169
 Transform:
   m_ObjectHideFlags: 0
@@ -930,7 +945,7 @@ Transform:
   m_GameObject: {fileID: 297184995}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.22, y: 1.53, z: 0}
+  m_LocalPosition: {x: -1.9, y: -0.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1285,7 +1300,7 @@ Transform:
   m_GameObject: {fileID: 412659835}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.85, y: 1.61, z: 0}
+  m_LocalPosition: {x: -0.15, y: 1.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1532,7 +1547,7 @@ Transform:
   m_GameObject: {fileID: 472386617}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.25, y: 1.83, z: 0}
+  m_LocalPosition: {x: 0.88, y: 0.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2814,9 +2829,8 @@ MonoBehaviour:
   pigInventoryPanel: {fileID: 907763698}
   slotPrefab: {fileID: 555985235482192352, guid: 85cb6548c97bfab42a3e26f33a861c02, type: 3}
   slotCount: 8
-  pigPrefabs:
-  - {fileID: 8900741341652261079, guid: 25a74e1ae6cd28b4a971e69581a817ae, type: 3}
-  - {fileID: 2741491253230245457, guid: 4dee7e3e28f24da46a8470178213ba18, type: 3}
+  pigPrefab: {fileID: 0}
+  pigsScriptableObjects: []
 --- !u!4 &913389414
 Transform:
   m_ObjectHideFlags: 0
@@ -3633,7 +3647,7 @@ Transform:
   m_GameObject: {fileID: 1097759919}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.1599998, y: 2.9, z: 0}
+  m_LocalPosition: {x: -1.32, y: -0.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4528,7 +4542,7 @@ Transform:
   m_GameObject: {fileID: 1493786923}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.44, y: 2.6799998, z: 0}
+  m_LocalPosition: {x: -1.65, y: -1.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4903,12 +4917,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782a0de958193bd47a1854d4fdbe0fd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  zone: {fileID: 11400000, guid: 0f5af9ca9ae17594ca484594286a50fb, type: 2}
+  zone: {fileID: 11400000, guid: faeaaf6d88d27b64f8d0a916d52f2a49, type: 2}
   mission: {fileID: 0}
   missionController: {fileID: 2145032501}
   zoneController: {fileID: 1548834625}
-  missionWaypoints: []
+  missionWaypoints:
+  - {fileID: 1097759920}
+  - {fileID: 472386618}
   waypointOccupied: 
+  reputationFactor: 0
+  missionGenerationTimer: 0
+  missionGenerationTime: 0
+  reputationEffectOnMissionCount: 0
 --- !u!4 &1657487532
 Transform:
   m_ObjectHideFlags: 0
@@ -5258,7 +5278,7 @@ Transform:
   m_GameObject: {fileID: 1765116465}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.81, y: 2.6, z: 0}
+  m_LocalPosition: {x: -1.91, y: 0.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5381,6 +5401,10 @@ MonoBehaviour:
   - {fileID: 591064899}
   - {fileID: 506396365}
   waypointOccupied: 
+  reputationFactor: 0
+  missionGenerationTimer: 0
+  missionGenerationTime: 0
+  reputationEffectOnMissionCount: 0
 --- !u!4 &1788630718
 Transform:
   m_ObjectHideFlags: 0
@@ -5957,7 +5981,7 @@ Transform:
   m_GameObject: {fileID: 1941980055}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.22, y: 1.53, z: 0}
+  m_LocalPosition: {x: 1.26, y: -0.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6546,7 +6570,7 @@ Transform:
   m_GameObject: {fileID: 2112625091}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.85, y: 1.61, z: 0}
+  m_LocalPosition: {x: 1.29, y: -1.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

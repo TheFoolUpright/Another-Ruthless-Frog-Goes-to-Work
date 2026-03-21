@@ -12,10 +12,9 @@ public class MissionGenerator : MonoBehaviour
     [SerializeField] private ZoneController zoneController;
     public Transform[] missionWaypoints;
     public bool[] waypointOccupied;
-    private float reputationFactor;
-    private float missionGenerationTimer;
-    private float missionGenerationTime;
-    private float reputationEffectOnMissionCount;
+    [SerializeField] private float reputationFactor;
+    [SerializeField] private float missionGenerationTimer;
+    [SerializeField] private float reputationEffectOnMissionCount;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,7 +28,7 @@ public class MissionGenerator : MonoBehaviour
         reputationEffectOnMissionCount = Mathf.FloorToInt(zoneController.globalReputation / 5f);
         if (missionController.activeMissionList.Count == 2 + reputationEffectOnMissionCount)
         {
-            missionGenerationTimer = missionGenerationTime;
+            missionGenerationTimer = zone.zoneMissionGenerationTime;
             return;
         }
 
@@ -45,7 +44,7 @@ public class MissionGenerator : MonoBehaviour
             }
             CalculateMissionDanger();
             DetermineSpecificMission();
-            missionGenerationTimer = missionGenerationTime;
+            missionGenerationTimer = zone.zoneMissionGenerationTime;
         }
     }
 

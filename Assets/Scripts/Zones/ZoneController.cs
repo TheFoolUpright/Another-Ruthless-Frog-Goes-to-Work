@@ -3,6 +3,7 @@ using UnityEngine;
 public class ZoneController : MonoBehaviour
 {
     public int globalReputation;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
