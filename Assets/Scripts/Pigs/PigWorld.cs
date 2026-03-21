@@ -9,9 +9,30 @@ public class PigWorld : MonoBehaviour
     private NavMeshAgent agent;
     private StateMachine stateMachine;
 
+    [SerializeField] private MissionInfo debugMission; // assign in inspector for testing
+    [SerializeField] private PigsScriptableObject debugPigData;
+
+
+    void Awake()
+    {
+        if (debugPigData == null)
+        {
+            Debug.LogError("PigWorld is missing debugPigData", this);
+            return;
+        }
+
+        PigRuntime testPig = new PigRuntime(debugPigData);
+        Initialize(testPig);
+    }
+
     public void Initialize(PigRuntime pigRuntime)
     {
         pig = pigRuntime;
+
+        if (debugMission != null)
+        {
+            pig.currentMission = debugMission;
+        }
 
         agent = GetComponent<NavMeshAgent>();
         stateMachine = gameObject.AddComponent<StateMachine>();
