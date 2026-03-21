@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PigsScriptableObject
   pigName: Yehor
   image: {fileID: -4575819909902520831, guid: e0868829028f5874b8a840f383b87004, type: 3}
-  professionalism: 1
+  professionalism: 0
   stamina: 3

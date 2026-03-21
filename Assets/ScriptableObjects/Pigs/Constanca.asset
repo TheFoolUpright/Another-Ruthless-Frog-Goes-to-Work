@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PigsScriptableObject
   pigName: Constanca
   image: {fileID: -346881495065987919, guid: 58d814943c35f86498a69a22a5b8fa07, type: 3}
-  professionalism: 1
+  professionalism: 0
   stamina: 3

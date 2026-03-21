@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PigsScriptableObject
   pigName: Nelio
   image: {fileID: 9127135734237884353, guid: 2b7f17afbfc64ca47831b6e281d1d827, type: 3}
-  professionalism: 3
+  professionalism: 2
   stamina: 3

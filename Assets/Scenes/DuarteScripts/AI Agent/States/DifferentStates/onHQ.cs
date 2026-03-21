@@ -3,20 +3,20 @@ using UnityEngine;
 
 public class onHQ : BaseState
 {
-    private float _timer;
-    private Transform _mission;
+    private PigRuntime _pig;
 
-    public onHQ(GameObject gameobject, Transform target) : base(gameobject)
+    public onHQ(PigRuntime pig) : base(null)
     {
-        _mission = target;
+        this._pig = pig;
     }
 
     public override Type Tick()
     {
-        if (_mission != null)
+        if (_pig.HasMission())
         {
             return typeof(onTravel);
         }
+
         return typeof(onHQ);
     }
 }

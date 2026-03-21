@@ -18,6 +18,11 @@ public class MissionInfo : MonoBehaviour
     {
 
     }
+
+    public Transform GetTarget()
+    {
+        return transform;
+    }
     void DetermineSpecificMission()
     {
         MissionsScriptableObject newMission;

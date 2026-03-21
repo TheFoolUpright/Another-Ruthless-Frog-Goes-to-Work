@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PigsScriptableObject
   pigName: Andre
   image: {fileID: 3062944851940155911, guid: 6001fd74d7cf47047bec4f52ae873a77, type: 3}
-  professionalism: 1
+  professionalism: 0
   stamina: 3

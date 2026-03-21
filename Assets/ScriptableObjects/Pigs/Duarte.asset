@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PigsScriptableObject
   pigName: Duarte
   image: {fileID: -4316478005388629091, guid: f59db5e4e41a7814cace08ecfb1c0a4f, type: 3}
-  professionalism: 1
+  professionalism: 0
   stamina: 3

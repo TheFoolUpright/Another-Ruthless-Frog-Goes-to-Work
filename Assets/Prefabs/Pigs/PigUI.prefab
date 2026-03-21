@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 8942642280681473779}
   - component: {fileID: -2930292349722417616}
   m_Layer: 5
-  m_Name: Pig
+  m_Name: PigUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -330,8 +330,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65303c5bb7d46354abf955294acc91ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pig
-  pig: {fileID: 0}
-  pigStamina: 0
+  data: {fileID: 0}
+  currentStamina: 0
+  pigImage: {fileID: 1356860410189599356}
+  pigRankImage: {fileID: 7674762432146788815}
 --- !u!114 &-2930292349722417616
 MonoBehaviour:
   m_ObjectHideFlags: 0

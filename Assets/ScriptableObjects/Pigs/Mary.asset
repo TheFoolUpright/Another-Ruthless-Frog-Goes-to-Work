@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PigsScriptableObject
   pigName: Mary
   image: {fileID: 8276598832203390221, guid: f98e2865b058375408058cdd01b472f7, type: 3}
-  professionalism: 2
+  professionalism: 1
   stamina: 3

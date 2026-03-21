@@ -13,6 +13,4 @@ public class PigsScriptableObject : ScriptableObject
     public int GetProfessionalism() => professionalism;
     public float GetStamina() => stamina;
     
-    //[SerializeField] private int state; //TODO: Change the type to be a finite state
-
 }

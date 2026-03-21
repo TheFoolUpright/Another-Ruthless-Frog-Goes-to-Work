@@ -9,7 +9,9 @@ public abstract class BaseState
     public BaseState(GameObject gameObject)
     {
         this.gameObject = gameObject;
-        this.transform = gameObject.transform;
+
+        if (gameObject != null)
+            this.transform = gameObject.transform;
     }
 
     public abstract Type Tick();

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PigsScriptableObject
   pigName: Jane
   image: {fileID: -1998451160858823800, guid: 035d1b413cc7a3c41a41aa304f8818d1, type: 3}
-  professionalism: 2
+  professionalism: 1
   stamina: 3

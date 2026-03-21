@@ -1,34 +1,35 @@
 using System;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
 
 public class onTravel : BaseState
 {
     private NavMeshAgent _agent;
-    private Transform _target;
+    private PigRuntime _pig;
     private bool _hasStarted; // New flag to prevent instant finishing
 
-    public onTravel(GameObject gameObject, NavMeshAgent agent, Transform target) : base(gameObject)
+    public onTravel(PigRuntime pig, NavMeshAgent agent) : base(agent.gameObject)
     {
+        this._pig = pig;
         _agent = agent;
-        _target = target;
     }
 
     public override void OnEnter(BaseState oldState)
     {
         _agent.enabled = true;
         _agent.isStopped = false;                                       //Add this to force the agent to continue
-        _agent.SetDestination(_target.position);
+        _agent.SetDestination(_pig.currentMission.GetTarget().position);
     }
 
     public override Type Tick()
     {
-        if (_target == null)
+        if (!_pig.HasMission())
         {
-            return typeof(onTravel);
+            return typeof(onHQ);
         }
 
-        _agent.SetDestination(_target.position);
+        _agent.SetDestination(_pig.currentMission.GetTarget().position);
 
 
         if (_agent.pathPending)

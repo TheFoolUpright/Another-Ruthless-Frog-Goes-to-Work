@@ -6,9 +6,11 @@ public class onMission : BaseState
 {
     private NavMeshAgent _agent;
     private float _timer;
+    private PigRuntime _pig;
 
-    public onMission(GameObject gameObject, NavMeshAgent agent) : base(gameObject)
+    public onMission(PigRuntime pig, NavMeshAgent agent) : base(agent.gameObject)
     {
+        this._pig = pig;
         _agent = agent;
     }
 
