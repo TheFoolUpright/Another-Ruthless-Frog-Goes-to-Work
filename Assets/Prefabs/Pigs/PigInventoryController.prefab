@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9004827106211247413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7921496074601141018}
+  - component: {fileID: 63932560074412391}
+  m_Layer: 0
+  m_Name: PigInventoryController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7921496074601141018
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9004827106211247413}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 150, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &63932560074412391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9004827106211247413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b6033876eace84c92f0b2bf20fdd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PigInventoryController
+  pigInventoryPanel: {fileID: 0}
+  slotPrefab: {fileID: 555985235482192352, guid: 85cb6548c97bfab42a3e26f33a861c02, type: 3}
+  slotCount: 8
+  pigPrefabs:
+  - {fileID: 8900741341652261079, guid: 25a74e1ae6cd28b4a971e69581a817ae, type: 3}
+  - {fileID: 2741491253230245457, guid: 4dee7e3e28f24da46a8470178213ba18, type: 3}
