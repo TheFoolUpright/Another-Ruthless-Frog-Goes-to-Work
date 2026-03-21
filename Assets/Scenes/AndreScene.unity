@@ -256,20 +256,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782a0de958193bd47a1854d4fdbe0fd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  zone: {fileID: 11400000, guid: 87d6a6f26eea011408c81e1f8c8bcbb0, type: 2}
-  mission: {fileID: 0}
   missionController: {fileID: 2145032501}
   zoneController: {fileID: 1548834625}
+  zone: {fileID: 11400000, guid: 87d6a6f26eea011408c81e1f8c8bcbb0, type: 2}
+  missionPrefab: {fileID: 739294885681261423, guid: 4d5cc6c816bb0e7498338a02230186ea, type: 3}
+  reputationEffectOnMissionCount: 0
+  missionGenerationTimer: 0
+  reputationFactor: 0
   missionWaypoints:
   - {fileID: 1765116466}
   - {fileID: 297184996}
   - {fileID: 214772609}
   - {fileID: 1941980056}
   waypointOccupied: 
-  reputationFactor: 0
-  missionGenerationTimer: 0
-  missionGenerationTime: 0
-  reputationEffectOnMissionCount: 0
 --- !u!4 &19222507
 Transform:
   m_ObjectHideFlags: 0
@@ -889,19 +888,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782a0de958193bd47a1854d4fdbe0fd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  zone: {fileID: 11400000, guid: 689744daba5285f40aac7ac763d760f8, type: 2}
-  mission: {fileID: 0}
   missionController: {fileID: 2145032501}
   zoneController: {fileID: 1548834625}
+  zone: {fileID: 11400000, guid: 689744daba5285f40aac7ac763d760f8, type: 2}
+  missionPrefab: {fileID: 739294885681261423, guid: 4d5cc6c816bb0e7498338a02230186ea, type: 3}
+  reputationEffectOnMissionCount: 0
+  missionGenerationTimer: 0
+  reputationFactor: 0
   missionWaypoints:
   - {fileID: 1493786924}
   - {fileID: 2112625092}
   - {fileID: 412659836}
   waypointOccupied: 
-  reputationFactor: 0
-  missionGenerationTimer: 0
-  missionGenerationTime: 0
-  reputationEffectOnMissionCount: 0
 --- !u!4 &239299169
 Transform:
   m_ObjectHideFlags: 0
@@ -4917,18 +4915,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782a0de958193bd47a1854d4fdbe0fd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  zone: {fileID: 11400000, guid: faeaaf6d88d27b64f8d0a916d52f2a49, type: 2}
-  mission: {fileID: 0}
   missionController: {fileID: 2145032501}
   zoneController: {fileID: 1548834625}
+  zone: {fileID: 11400000, guid: faeaaf6d88d27b64f8d0a916d52f2a49, type: 2}
+  missionPrefab: {fileID: 739294885681261423, guid: 4d5cc6c816bb0e7498338a02230186ea, type: 3}
+  reputationEffectOnMissionCount: 0
+  missionGenerationTimer: 0
+  reputationFactor: 0
   missionWaypoints:
   - {fileID: 1097759920}
   - {fileID: 472386618}
   waypointOccupied: 
-  reputationFactor: 0
-  missionGenerationTimer: 0
-  missionGenerationTime: 0
-  reputationEffectOnMissionCount: 0
 --- !u!4 &1657487532
 Transform:
   m_ObjectHideFlags: 0
@@ -5393,18 +5390,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782a0de958193bd47a1854d4fdbe0fd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  zone: {fileID: 11400000, guid: 0f5af9ca9ae17594ca484594286a50fb, type: 2}
-  mission: {fileID: 0}
   missionController: {fileID: 2145032501}
   zoneController: {fileID: 1548834625}
+  zone: {fileID: 11400000, guid: 0f5af9ca9ae17594ca484594286a50fb, type: 2}
+  missionPrefab: {fileID: 739294885681261423, guid: 4d5cc6c816bb0e7498338a02230186ea, type: 3}
+  reputationEffectOnMissionCount: 0
+  missionGenerationTimer: 0
+  reputationFactor: 0
   missionWaypoints:
   - {fileID: 591064899}
   - {fileID: 506396365}
   waypointOccupied: 
-  reputationFactor: 0
-  missionGenerationTimer: 0
-  missionGenerationTime: 0
-  reputationEffectOnMissionCount: 0
 --- !u!4 &1788630718
 Transform:
   m_ObjectHideFlags: 0
@@ -6606,10 +6602,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   activeMissionList: []
-  availableEasyMissions: []
-  availableNormalMissions: []
-  availableHardMissions: []
-  availableExtremeMissions: []
+  availableEasyMissions:
+  - {fileID: 11400000, guid: 0a88daabc01584d4bb273aca959a0b5d, type: 2}
+  availableNormalMissions:
+  - {fileID: 11400000, guid: cfdfc9ba4069b7141ba5a08d563a1cc3, type: 2}
+  availableHardMissions:
+  - {fileID: 11400000, guid: 4c7a2ba32e876e34b857b8088332fc38, type: 2}
+  availableExtremeMissions:
+  - {fileID: 11400000, guid: 18c750a7ec59f144594ab3ce0567011b, type: 2}
 --- !u!4 &2145032502
 Transform:
   m_ObjectHideFlags: 0

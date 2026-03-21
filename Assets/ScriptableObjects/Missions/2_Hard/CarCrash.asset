@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d12dee1632e5548419249056ef219893, type: 3}
-  m_Name: Argument_0
+  m_Name: CarCrash
   m_EditorClassIdentifier: Assembly-CSharp::MissionsScriptableObject
-  title: Argument
-  description: Two people are arguing in the street.
+  title: 
+  description: 
   image: {fileID: 0}
-  dangerLevel: 0
+  dangerLevel: 2
   popUpCooldown: 0
   missionCompletionTime: 0
   professionalismRequirement: 0

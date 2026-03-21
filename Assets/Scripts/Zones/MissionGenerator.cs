@@ -1,25 +1,28 @@
-using NUnit.Framework;
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 using static Randomness;
 
 public class MissionGenerator : MonoBehaviour
 {
-    [SerializeField] private ZoneScriptableObject zone;
-    [SerializeField] private MissionsScriptableObject mission;
     [SerializeField] private MissionController missionController;
     [SerializeField] private ZoneController zoneController;
+    [SerializeField] private ZoneScriptableObject zone;
+    [SerializeField] private GameObject missionPrefab;
+    [SerializeField] private float reputationEffectOnMissionCount;
+    [SerializeField] private float missionGenerationTimer;
+    [SerializeField] private float reputationFactor;
     public Transform[] missionWaypoints;
     public bool[] waypointOccupied;
-    [SerializeField] private float reputationFactor;
-    [SerializeField] private float missionGenerationTimer;
-    [SerializeField] private float reputationEffectOnMissionCount;
+    private int missionDangerLevel;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        waypointOccupied = new bool[missionWaypoints.Length];
         missionGenerationTimer = zone.zoneMissionGenerationTime;
+        for (int i = 0; i < waypointOccupied.Length; i++)
+        {
+            waypointOccupied[i] = false;
+        }
     }
 
     // Update is called once per frame
@@ -38,23 +41,22 @@ public class MissionGenerator : MonoBehaviour
         }
         else
         {
-            if (!DetermineMissionPosition())
+            if (!CheckForAvailablePosition())
             {
                 return;
             }
             CalculateMissionDanger();
-            DetermineSpecificMission();
+            DetermineMissionPosition();
             missionGenerationTimer = zone.zoneMissionGenerationTime;
         }
     }
 
-    private bool DetermineMissionPosition()
+    private bool CheckForAvailablePosition()
     {
         for (int i = 0; i < waypointOccupied.Length; i++)
         {
             if (!waypointOccupied[i])
             {
-                mission.missionPosition = missionWaypoints[i];
                 return true;
             }
             else if (i == waypointOccupied.Length - 1)
@@ -71,42 +73,30 @@ public class MissionGenerator : MonoBehaviour
         switch (zone.zoneDangerLevel)
         {
             case 0:
-                mission.missionDangerLevel = Mathf.FloorToInt(NextGaussian(0 + reputationFactor, 4, 0f, 4.9f));
+                missionDangerLevel = Mathf.FloorToInt(NextGaussian(0 + reputationFactor, 4, 0f, 4.9f));
                 break;
             case 1:
-                mission.missionDangerLevel = Mathf.FloorToInt(NextGaussian(1 + reputationFactor, 4, 0f, 4.9f));
+                missionDangerLevel = Mathf.FloorToInt(NextGaussian(1 + reputationFactor, 4, 0f, 4.9f));
                 break;
             case 2:
-                mission.missionDangerLevel = Mathf.FloorToInt(NextGaussian(2 + reputationFactor, 4, 0f, 4.9f));
+                missionDangerLevel = Mathf.FloorToInt(NextGaussian(2 + reputationFactor, 4, 0f, 4.9f));
                 break;
             case 3:
-                mission.missionDangerLevel = Mathf.FloorToInt(NextGaussian(3 + reputationFactor, 4, 0f, 4.9f));
+                missionDangerLevel = Mathf.FloorToInt(NextGaussian(3 + reputationFactor, 4, 0f, 4.9f));
                 break;
         }
     }
 
-    void DetermineSpecificMission()
+    void DetermineMissionPosition()
     {
-        MissionsScriptableObject newMission;
-        switch (mission.missionDangerLevel)
+        for (int i = 0; i < waypointOccupied.Length; i++)
         {
-            case 0:
-                newMission = missionController.availableEasyMissions[UnityEngine.Random.Range(0, missionController.availableEasyMissions.Length - 1)];
-                break;
-            case 1:
-                newMission = missionController.availableNormalMissions[UnityEngine.Random.Range(0, missionController.availableNormalMissions.Length - 1)];
-                break;
-            case 2:
-                newMission = missionController.availableHardMissions[UnityEngine.Random.Range(0, missionController.availableHardMissions.Length - 1)];
-                break;
-            case 3:
-                newMission = missionController.availableExtremeMissions[UnityEngine.Random.Range(0, missionController.availableExtremeMissions.Length - 1)];
-                break;
-            default:
-                newMission = missionController.availableEasyMissions[UnityEngine.Random.Range(0, missionController.availableEasyMissions.Length - 1)];
-                Debug.Log("Mission Generation Error");
-                break;
+            if (!waypointOccupied[i])
+            {
+                GameObject mission = Instantiate(missionPrefab);
+                mission.GetComponent<MissionInfo>().missionDangerLevel = missionDangerLevel;
+                mission.transform.position = new Vector2(missionWaypoints[i].position.x, missionWaypoints[i].position.y);
+            }
         }
-        missionController.activeMissionList.Add(newMission);
     }
 }

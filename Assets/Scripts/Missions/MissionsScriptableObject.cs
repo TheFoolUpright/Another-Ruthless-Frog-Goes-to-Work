@@ -11,7 +11,6 @@ public class MissionsScriptableObject : ScriptableObject
     public float missionPopUpCooldown;
     public float missionCompletionTime;
     public float missionProfessionalismRequirement;
-    public Transform missionPosition;
 
     private void Awake()
     {
