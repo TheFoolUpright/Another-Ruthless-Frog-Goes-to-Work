@@ -3,39 +3,39 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Scriptable Objects/Mission")]
 public class MissionsScriptableObject : ScriptableObject
 {
-    [SerializeField] private string title;
-    [SerializeField] private string description;
-    [SerializeField] private Sprite image;
-    [SerializeField] private int dangerLevel;
-    [SerializeField] private float popUpCooldown;
-    [SerializeField] private float missionCompletionTime;
-    [SerializeField] private float professionalismRequirement;
+    public string missionTitle;
+    public string missionDescription;
+    public Sprite missionImage;
+    public int missionDangerLevel;
+    public float missionPopUpCooldown;
+    public float missionCompletionTime;
+    public float missionProfessionalismRequirement;
 
     private void Awake()
     {
-        switch(dangerLevel)
+        switch(missionDangerLevel)
         {
             case 0:
-                popUpCooldown = 3;
-                professionalismRequirement = Random.Range(0, 4);
+                missionPopUpCooldown = 3;
+                missionProfessionalismRequirement = Random.Range(0, 4);
                 break;
             case 1:
-                popUpCooldown = 6;
-                professionalismRequirement = Random.Range(3, 7);
+                missionPopUpCooldown = 6;
+                missionProfessionalismRequirement = Random.Range(3, 7);
                 break;
             case 2:
-                popUpCooldown = 9;
-                professionalismRequirement = Random.Range(6, 10);
+                missionPopUpCooldown = 9;
+                missionProfessionalismRequirement = Random.Range(6, 10);
 
                 break;
             case 3:
-                popUpCooldown = 12;
-                professionalismRequirement = Random.Range(9, 13);
+                missionPopUpCooldown = 12;
+                missionProfessionalismRequirement = Random.Range(9, 13);
                 break;
             default:
                 Debug.Log("pop UpCooldown Miss-Assigned");
                 break;
         }
-        missionCompletionTime = professionalismRequirement * 2;
+        missionCompletionTime = missionProfessionalismRequirement * 2;
     }
 }
