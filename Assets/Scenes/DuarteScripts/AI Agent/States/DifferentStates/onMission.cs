@@ -15,6 +15,13 @@ public class onMission : BaseState
     public override void OnEnter(BaseState oldState)
     {
         _timer = 0f;
+        _agent.enabled = false;
+        _agent.velocity = Vector3.zero;
+    }
+
+    public override void OnExit(BaseState newState)
+    {
+        _agent.enabled = true;
     }
     
     public override Type Tick()
