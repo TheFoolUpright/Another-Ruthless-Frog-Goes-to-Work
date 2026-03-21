@@ -57,6 +57,7 @@ public class MissionGenerator : MonoBehaviour
         {
             if (!waypointOccupied[i])
             {
+                waypointOccupied[i] = true;
                 return true;
             }
             else if (i == waypointOccupied.Length - 1)
@@ -95,6 +96,8 @@ public class MissionGenerator : MonoBehaviour
             {
                 GameObject mission = Instantiate(missionPrefab);
                 mission.GetComponent<MissionInfo>().missionDangerLevel = missionDangerLevel;
+                mission.GetComponent<MissionInfo>().missionController = missionController;
+                mission.GetComponent<MissionInfo>().missionGenerator = this;
                 mission.transform.position = new Vector2(missionWaypoints[i].position.x, missionWaypoints[i].position.y);
             }
         }

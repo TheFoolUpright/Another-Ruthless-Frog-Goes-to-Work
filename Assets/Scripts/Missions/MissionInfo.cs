@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class MissionInfo : MonoBehaviour
 {
-    [SerializeField] private MissionsScriptableObject missionsScriptableObject;
-    [SerializeField] private MissionController missionController;
+    public MissionsScriptableObject missionsScriptableObject;
+    public MissionGenerator missionGenerator;
+    public MissionController missionController;
     public int missionDangerLevel;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,6 +16,7 @@ public class MissionInfo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
     }
     void DetermineSpecificMission()
     {
@@ -48,7 +50,7 @@ public class MissionInfo : MonoBehaviour
                 Debug.Log("Mission Generation Error");
                 break;
         }
-
+        missionsScriptableObject = newMission;
         missionController.activeMissionList.Add(newMission);
     }
 }
