@@ -8,6 +8,7 @@ public class MissionInfo : MonoBehaviour
     public MissionsScriptableObject missionsScriptableObject;
     public MissionGenerator missionGenerator;
     public MissionController missionController;
+    public bool missionStarted;
     public int missionDangerLevel;
 
     public int maxAssignedPigs = 4;

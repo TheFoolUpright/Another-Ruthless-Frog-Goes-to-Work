@@ -14,8 +14,10 @@ public class MissionClicking : MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log(missionInfo);
-        missionPopUpUIObject.SetActive(true);
-        missionPopUpUIObject.GetComponent<MissionPopupUI>().Open(missionInfo);
+        //if (!missionInfo.missionStarted)
+        {
+            missionPopUpUIObject.SetActive(true);
+            missionPopUpUIObject.GetComponent<MissionPopupUI>().Open(missionInfo);
+        }
     }
 }
