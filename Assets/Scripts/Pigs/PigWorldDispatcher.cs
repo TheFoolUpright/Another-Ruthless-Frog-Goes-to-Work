@@ -44,7 +44,7 @@ public class PigWorldDispatcher : MonoBehaviour
                 continue;
             }
 
-            pigWorld.Initialize(pig);
+            pigWorld.Initialize(pig, hqSpawnPoint);
             pigWorld.GoToMission();
         }
     }

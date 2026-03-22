@@ -10,13 +10,19 @@ public class onMission : BaseState
 
     public onMission(PigRuntime pig, NavMeshAgent agent) : base(agent.gameObject)
     {
-        this._pig = pig;
+        _pig = pig;
         _agent = agent;
     }
 
     public override void OnEnter(BaseState oldState)
     {
         _timer = 0f;
+
+        if (_pig != null && _pig.currentMission != null)
+        {
+            _pig.currentMission.missionStartedAtLocation = true;
+        }
+
         _agent.enabled = false;
         _agent.velocity = Vector3.zero;
     }
@@ -28,11 +34,18 @@ public class onMission : BaseState
 
     public override Type Tick()
     {
-        _timer += Time.deltaTime; // This line is missing in your current file!
-
-        if (_timer >= 10f)
+        if (_pig == null || _pig.currentMission == null)
         {
-            return typeof(onTravel);
+            return typeof(onReturnToHQ);
+        }
+
+        _timer += Time.deltaTime;
+
+        // Use mission duration from MissionInfo if available
+        if (_timer >= _pig.currentMission.missionDuration)
+        {
+            _pig.currentMission.missionOver = true;
+            return typeof(onReturnToHQ);
         }
 
         return typeof(onMission);

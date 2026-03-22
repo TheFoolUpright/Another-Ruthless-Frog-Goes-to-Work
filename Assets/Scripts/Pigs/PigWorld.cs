@@ -15,11 +15,12 @@ public class PigWorld : MonoBehaviour
     [SerializeField] private MissionInfo debugMission;
     [SerializeField] private PigsScriptableObject debugPigData;
 
+    private Transform hqTarget;
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         stateMachine = gameObject.AddComponent<StateMachine>();
-
 
         if (pigSpriteRenderer == null)
         {
@@ -28,7 +29,6 @@ public class PigWorld : MonoBehaviour
 
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-
     }
 
     private void Start()
@@ -42,14 +42,15 @@ public class PigWorld : MonoBehaviour
                 testPig.currentMission = debugMission;
             }
 
-            Initialize(testPig);
+            Initialize(testPig, null);
             GoToMission();
         }
     }
 
-    public void Initialize(PigRuntime pigRuntime)
+    public void Initialize(PigRuntime pigRuntime, Transform hqTransform)
     {
         pig = pigRuntime;
+        hqTarget = hqTransform;
         isInitialized = true;
 
         if (pigSpriteRenderer != null && pig != null && pig.data != null)
@@ -65,7 +66,8 @@ public class PigWorld : MonoBehaviour
         {
             { typeof(onHQ), new onHQ(pig) },
             { typeof(onTravel), new onTravel(pig, agent) },
-            { typeof(onMission), new onMission(pig, agent) }
+            { typeof(onMission), new onMission(pig, agent) },
+            { typeof(onReturnToHQ), new onReturnToHQ(this, pig, agent, hqTarget) }
         };
 
         stateMachine.SetStates(states);
@@ -80,6 +82,39 @@ public class PigWorld : MonoBehaviour
         }
 
         stateMachine.SwitchToNewState(typeof(onTravel));
+    }
+
+    public void DespawnAtHQ()
+    {
+        if (pig != null)
+        {
+            MissionInfo mission = pig.currentMission;
+
+            pig.isDispatched = false;
+
+            if (pig.homeInventorySlot != null && pig.homeInventorySlot.currentPig != null)
+            {
+                PigUI pigUI = pig.homeInventorySlot.currentPig.GetComponent<PigUI>();
+                if (pigUI != null)
+                {
+                    pigUI.RefreshVisualState();
+                }
+            }
+
+            if (mission != null)
+            {
+                mission.NotifyPigReturned(pig);
+            }
+
+            pig.currentMission = null;
+        }
+
+        Destroy(gameObject);
+    }
+
+    public Transform GetHQTarget()
+    {
+        return hqTarget;
     }
 
     public PigRuntime GetPig()

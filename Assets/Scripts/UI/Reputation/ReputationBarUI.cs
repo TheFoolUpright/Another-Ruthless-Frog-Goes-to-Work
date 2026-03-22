@@ -11,7 +11,7 @@ public class ReputationBarUI : MonoBehaviour
     [SerializeField] private float[] unlockThresholds = { 240f, 280f, 320f, 360f };
 
     public float totalReputationPercentage;
-    private float totalReputation;
+    public float totalReputation;
     private int nextUnlockIndex = 0;
 
     public void Update()

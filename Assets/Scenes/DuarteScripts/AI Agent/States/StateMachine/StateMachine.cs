@@ -32,16 +32,14 @@ public class StateMachine : MonoBehaviour
 
     public void SwitchToNewState(Type nextState)
     {
-        CurrentState?.OnExit(_states[nextState]);
+        BaseState newState = _states[nextState];
+
+        CurrentState?.OnExit(newState);
         BaseState oldState = CurrentState;
 
-        CurrentState = _states[nextState];
-
+        CurrentState = newState;
         currentStateName = CurrentState.GetType().Name;
 
-        if (oldState != null)
-        {
-            CurrentState.OnEnter(oldState);
-        }
+        CurrentState.OnEnter(oldState);
     }
 }

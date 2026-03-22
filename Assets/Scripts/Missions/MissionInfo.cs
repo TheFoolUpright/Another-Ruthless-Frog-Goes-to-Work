@@ -15,6 +15,7 @@ public class MissionInfo : MonoBehaviour
     public bool missionOver;
     public int pigProfessionalism;
     public bool missionPopUpOpened;
+    private bool missionResultProcessed;
 
     public int maxAssignedPigs = 4;
     public List<PigRuntime> assignedPigs = new List<PigRuntime>();
@@ -25,6 +26,17 @@ public class MissionInfo : MonoBehaviour
         missionPopUpUIObject = missionGenerator.missionPopUpUIObject;
         DetermineMissionDuration();
         missionPopUpCooldownTimer = missionsScriptableObject.missionPopUpCooldown;
+    }
+
+    public void NotifyPigReturned(PigRuntime pig)
+    {
+        assignedPigs.Remove(pig);
+
+        if (assignedPigs.Count == 0 && missionResultProcessed)
+        {
+            missionController.activeMissionList.Remove(missionsScriptableObject);
+            Destroy(gameObject);
+        }
     }
 
     private void Update()
@@ -163,9 +175,22 @@ public class MissionInfo : MonoBehaviour
         missionDurationTimer = missionDuration;
     }
 
+    public void CalculateAssignedProfessionalism()
+    {
+        pigProfessionalism = 0;
+
+        for (int i = 0; i < assignedPigs.Count; i++)
+        {
+            if (assignedPigs[i] != null)
+            {
+                pigProfessionalism += assignedPigs[i].data.GetProfessionalism() + 1;
+            }
+        }
+    }
+
     void MissionResult()
     {
-        if (missionStartedAtLocation)
+        if (missionStartedAtLocation && !missionOver)
         {
             if (missionDurationTimer > 0)
             {
@@ -177,26 +202,27 @@ public class MissionInfo : MonoBehaviour
             }
         }
 
-        if (missionOver)
+        if (missionOver && !missionResultProcessed)
         {
+            missionResultProcessed = true;
+
             if (missionsScriptableObject.missionProfessionalismRequirement <= pigProfessionalism)
             {
                 switch (missionDangerLevel)
                 {
                     case 0:
-                        missionGenerator.zoneReputation = Mathf.Clamp(missionGenerator.zoneReputation + 5, 0, 100);
+                        missionGenerator.zoneReputation = Mathf.Clamp(missionGenerator.zoneReputation + 100, 0, 100);
                         break;
                     case 1:
-                        missionGenerator.zoneReputation = Mathf.Clamp(missionGenerator.zoneReputation + 10, 0, 100);
+                        missionGenerator.zoneReputation = Mathf.Clamp(missionGenerator.zoneReputation + 100, 0, 100);
                         break;
                     case 2:
-                        missionGenerator.zoneReputation = Mathf.Clamp(missionGenerator.zoneReputation + 15, 0, 100);
+                        missionGenerator.zoneReputation = Mathf.Clamp(missionGenerator.zoneReputation + 100, 0, 100);
                         break;
                     case 3:
-                        missionGenerator.zoneReputation = Mathf.Clamp(missionGenerator.zoneReputation + 20, 0, 100);
+                        missionGenerator.zoneReputation = Mathf.Clamp(missionGenerator.zoneReputation + 100, 0, 100);
                         break;
                 }
-                Destroy(gameObject);
             }
             else
             {
@@ -215,6 +241,10 @@ public class MissionInfo : MonoBehaviour
                         missionGenerator.zoneReputation = Mathf.Clamp(missionGenerator.zoneReputation - 20, 0, 100);
                         break;
                 }
+            }
+
+            if (assignedPigs.Count == 0)
+            {
                 missionController.activeMissionList.Remove(missionsScriptableObject);
                 Destroy(gameObject);
             }

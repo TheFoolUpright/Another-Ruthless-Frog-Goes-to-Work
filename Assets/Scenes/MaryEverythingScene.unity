@@ -3192,6 +3192,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZoneController
       objectReference: {fileID: 0}
+    - target: {fileID: 7118435387746890976, guid: fa669eb0794e34947925526d80d546b2, type: 3}
+      propertyPath: reputationBarUI
+      value: 
+      objectReference: {fileID: 2112796084}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

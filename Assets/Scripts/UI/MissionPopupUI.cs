@@ -92,6 +92,7 @@ public class MissionPopupUI : MonoBehaviour
             return;
         }
 
+        currentMission.CalculateAssignedProfessionalism();
         pigWorldDispatcher.DispatchMission(currentMission);
         ReturnAssignedPigVisualsToInventory();
         Close();

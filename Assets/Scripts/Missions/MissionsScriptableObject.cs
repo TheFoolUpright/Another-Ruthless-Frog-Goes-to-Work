@@ -18,20 +18,20 @@ public class MissionsScriptableObject : ScriptableObject
         {
             case 0:
                 missionPopUpCooldown = 4;
-                missionProfessionalismRequirement = Random.Range(0, 4);
+                missionProfessionalismRequirement = Random.Range(0, 2);
                 break;
             case 1:
                 missionPopUpCooldown = 8;
-                missionProfessionalismRequirement = Random.Range(3, 7);
+                missionProfessionalismRequirement = Random.Range(1, 4);
                 break;
             case 2:
                 missionPopUpCooldown = 12;
-                missionProfessionalismRequirement = Random.Range(6, 10);
+                missionProfessionalismRequirement = Random.Range(3, 6);
 
                 break;
             case 3:
                 missionPopUpCooldown = 16;
-                missionProfessionalismRequirement = Random.Range(9, 13);
+                missionProfessionalismRequirement = Random.Range(5, 8);
                 break;
             default:
                 Debug.Log("pop UpCooldown Miss-Assigned");
