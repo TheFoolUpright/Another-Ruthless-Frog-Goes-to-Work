@@ -13,6 +13,6 @@ public class UITextReputation : MonoBehaviour
 
     public void UpdateReputationText()
     {
-        reputationText.text = zonePrefab.zone.zoneReputation.ToString() + "%";
+        reputationText.text = zonePrefab.zoneReputation.ToString() + "%";
     }
 }

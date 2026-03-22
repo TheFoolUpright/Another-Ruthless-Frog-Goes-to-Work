@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Zone3
   m_EditorClassIdentifier: Assembly-CSharp::ZoneScriptableObject
   zoneDangerLevel: 3
-  zoneReputation: 100
+  zoneReputation: 20
   zoneMissionGenerationTime: 20

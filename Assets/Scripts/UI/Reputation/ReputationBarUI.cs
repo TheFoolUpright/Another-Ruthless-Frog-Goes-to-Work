@@ -21,7 +21,7 @@ public class ReputationBarUI : MonoBehaviour
         {
             if (zones[i] != null && zones[i].zone != null)
             {
-                totalReputation += zones[i].zone.zoneReputation;
+                totalReputation += zones[i].zoneReputation;
             }
         }
 

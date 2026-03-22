@@ -5,7 +5,6 @@ using UnityEngine;
 public class ZoneScriptableObject : ScriptableObject
 {
     public float zoneDangerLevel;
-    public float zoneReputation;
     public float zoneMissionGenerationTime; //seconds
 
     private void Awake()

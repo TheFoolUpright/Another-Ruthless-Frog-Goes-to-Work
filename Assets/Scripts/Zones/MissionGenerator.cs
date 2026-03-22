@@ -10,6 +10,7 @@ public class MissionGenerator : MonoBehaviour
     [SerializeField] private float reputationEffectOnMissionCount;
     [SerializeField] private float missionGenerationTimer;
     [SerializeField] private float reputationFactor;
+    [SerializeField] public float zoneReputation;
     public GameObject missionPopUpUIObject;
 
     public Transform[] missionWaypoints;
@@ -73,7 +74,7 @@ public class MissionGenerator : MonoBehaviour
 
     void CalculateMissionDanger()
     {
-        reputationFactor = (5 - zone.zoneReputation) / 10f;
+        reputationFactor = (5 - zoneReputation) / 10f;
 
         switch (zone.zoneDangerLevel)
         {
