@@ -52,6 +52,7 @@ GameObject:
   - component: {fileID: 3857221807568702260}
   - component: {fileID: 6186723752495919365}
   - component: {fileID: 8044861514080529479}
+  - component: {fileID: 8917334938802323077}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -165,6 +166,26 @@ MonoBehaviour:
   - {fileID: 3970458717625598263}
   - {fileID: 1556882775053853555}
   - {fileID: 6960337500660511686}
+--- !u!114 &8917334938802323077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778714819021761556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9f1ec8c6e2e0146a12bf7e8e2513c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReputationBarUI
+  zones:
+  - {fileID: 1548276342823129954, guid: 13187b28ea0939a4b87edf1e9ead489a, type: 3}
+  - {fileID: 4192785571026833251, guid: 30f9d0d1d0802624eb081ecd821544cc, type: 3}
+  - {fileID: 5606454629113765115, guid: 48fa7dc1c72a59e4d9afe5b83b4dba05, type: 3}
+  - {fileID: 8804193596186759473, guid: ce21d335eae66de49b73a8c865b4dd21, type: 3}
+  reputationBackground: {fileID: 4035187373700320382}
+  reputationFill: {fileID: 8734285437708640302}
+  maxTotalReputation: 400
 --- !u!1 &1995832096419938319
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,7 +252,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '%'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -383,7 +404,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '%'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -535,7 +556,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '%'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -621,6 +642,133 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UITextReputation
   zonePrefab: {fileID: 4192785571026833251, guid: 30f9d0d1d0802624eb081ecd821544cc, type: 3}
   reputationText: {fileID: 3970458717625598263}
+<<<<<<< Updated upstream
+--- !u!1 &5612733054248080761
+=======
+--- !u!1 &7990759598037199490
+>>>>>>> Stashed changes
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+<<<<<<< Updated upstream
+  - component: {fileID: 6081129729831059931}
+  - component: {fileID: 5573469454713799487}
+  - component: {fileID: 8519128274333121026}
+  m_Layer: 5
+  m_Name: MissionBlock
+=======
+  - component: {fileID: 8734285437708640302}
+  - component: {fileID: 1791451079886348839}
+  - component: {fileID: 5418688636381276418}
+  m_Layer: 5
+  m_Name: ReputationFill
+>>>>>>> Stashed changes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+<<<<<<< Updated upstream
+--- !u!224 &6081129729831059931
+=======
+--- !u!224 &8734285437708640302
+>>>>>>> Stashed changes
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
+  m_GameObject: {fileID: 5612733054248080761}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2912115691897878201}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 195, y: 195}
+  m_SizeDelta: {x: 380, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5573469454713799487
+=======
+  m_GameObject: {fileID: 7990759598037199490}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.999, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4035187373700320382}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 3, y: 0}
+  m_SizeDelta: {x: 945, y: 62}
+  m_Pivot: {x: 0, y: 0.5}
+--- !u!222 &1791451079886348839
+>>>>>>> Stashed changes
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
+  m_GameObject: {fileID: 5612733054248080761}
+  m_CullTransparentMesh: 1
+--- !u!114 &8519128274333121026
+=======
+  m_GameObject: {fileID: 7990759598037199490}
+  m_CullTransparentMesh: 1
+--- !u!114 &5418688636381276418
+>>>>>>> Stashed changes
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
+  m_GameObject: {fileID: 5612733054248080761}
+  m_Enabled: 0
+=======
+  m_GameObject: {fileID: 7990759598037199490}
+  m_Enabled: 1
+>>>>>>> Stashed changes
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+<<<<<<< Updated upstream
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+=======
+  m_Sprite: {fileID: -3421385420971039018, guid: ab8adc7209487704bab744a328cdec22, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+>>>>>>> Stashed changes
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &8995322240905867682
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,7 +935,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '%'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -961,24 +1109,202 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1262075188983002686, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 1262075188983002686, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 1274256990515979760, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
+      propertyPath: slotType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899055114342155613, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899055114342155613, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 1906737714156918419, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
+      propertyPath: slotType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342697167300181673, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342697167300181673, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352877858179034471, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
+      propertyPath: slotType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703637251337608327, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703637251337608327, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8603565577350660720, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
       propertyPath: m_Name
       value: MissionPopUp
       objectReference: {fileID: 0}
     - target: {fileID: 8603565577350660720, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816794012975394451, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816794012975394451, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 8824610200034573661, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
+      propertyPath: slotType
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1144377741780181297, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6081129729831059931}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8603565577350660720, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 938036844694450582}
   m_SourcePrefab: {fileID: 100100000, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
+--- !u!114 &2008829655606278895 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4352877858179034471, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
+  m_PrefabInstance: {fileID: 2848611103573940104}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd3c9c7d1910564bb914e0c73773f32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PigSlot
 --- !u!224 &2912115691897878201 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1144377741780181297, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
   m_PrefabInstance: {fileID: 2848611103573940104}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3233598274799160131 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 821978174236286155, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
+  m_PrefabInstance: {fileID: 2848611103573940104}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!114 &3902190198364140152 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1274256990515979760, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
+  m_PrefabInstance: {fileID: 2848611103573940104}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd3c9c7d1910564bb914e0c73773f32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PigSlot
+--- !u!114 &4467108406388048155 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1906737714156918419, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
+  m_PrefabInstance: {fileID: 2848611103573940104}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd3c9c7d1910564bb914e0c73773f32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PigSlot
+--- !u!114 &5005195612211957579 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7133220570530764995, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
+  m_PrefabInstance: {fileID: 2848611103573940104}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &5427128073662465621 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7843375604177146333, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
+  m_PrefabInstance: {fileID: 2848611103573940104}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!1 &5831684311480391160 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8603565577350660720, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
+  m_PrefabInstance: {fileID: 2848611103573940104}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &938036844694450582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5831684311480391160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 976966ed13aabac40a629f319b62caeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MissionPopupUI
+  popupRoot: {fileID: 5831684311480391160}
+  missionTitleText: {fileID: 8827149985734707983}
+  missionDescriptionText: {fileID: 5005195612211957579}
+  missionImage: {fileID: 3233598274799160131}
+  professionalismText: {fileID: 5427128073662465621}
+  missionSlots:
+  - {fileID: 6773163752706239189}
+  - {fileID: 2008829655606278895}
+  - {fileID: 4467108406388048155}
+  - {fileID: 3902190198364140152}
+  debugMission: {fileID: 0}
+--- !u!114 &6773163752706239189 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8824610200034573661, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
+  m_PrefabInstance: {fileID: 2848611103573940104}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd3c9c7d1910564bb914e0c73773f32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PigSlot
+--- !u!114 &8827149985734707983 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6703637251337608327, guid: 349a128757ff74e45a9b158c13af7892, type: 3}
+  m_PrefabInstance: {fileID: 2848611103573940104}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &4577319081667214998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1073,7 +1399,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 610865547124978408, guid: 8747a8347e461794ab12df13330e591c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8734285437708640302}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8747a8347e461794ab12df13330e591c, type: 3}
 --- !u!224 &4035187373700320382 stripped
