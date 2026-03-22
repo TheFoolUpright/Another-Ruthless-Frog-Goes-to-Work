@@ -4,8 +4,8 @@ using static Randomness;
 public class MissionGenerator : MonoBehaviour
 {
     [SerializeField] private MissionController missionController;
-    [SerializeField] private ZoneController zoneController;
     [SerializeField] public ZoneScriptableObject zone;
+    [SerializeField] public ReputationBarUI reputationBarUI;
     [SerializeField] private GameObject missionPrefab;
     [SerializeField] private float reputationEffectOnMissionCount;
     [SerializeField] private float missionGenerationTimer;
@@ -30,7 +30,7 @@ public class MissionGenerator : MonoBehaviour
 
     void Update()
     {
-        reputationEffectOnMissionCount = Mathf.FloorToInt(zoneController.globalReputation / 5f);
+        reputationEffectOnMissionCount = Mathf.FloorToInt(reputationBarUI.totalReputationPercentage / 50f);
 
         if (missionController.activeMissionList.Count == 2 + reputationEffectOnMissionCount)
         {

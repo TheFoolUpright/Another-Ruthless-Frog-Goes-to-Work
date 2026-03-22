@@ -6,6 +6,7 @@ public class ReputationBarUI : MonoBehaviour
     [SerializeField] private RectTransform reputationBackground;
     [SerializeField] private RectTransform reputationFill;
     [SerializeField] private float maxTotalReputation = 400f;
+    public float totalReputationPercentage;
 
     public void Update()
     {
@@ -33,5 +34,7 @@ public class ReputationBarUI : MonoBehaviour
         Vector2 newSize = reputationFill.sizeDelta;
         newSize.x = targetWidth;
         reputationFill.sizeDelta = newSize;
+
+        totalReputationPercentage = normalizedValue * 100;
     }
 }
