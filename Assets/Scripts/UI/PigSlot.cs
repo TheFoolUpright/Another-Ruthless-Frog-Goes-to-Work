@@ -12,4 +12,7 @@ public class PigSlot : MonoBehaviour
     public GameObject currentPig;
 
     [HideInInspector] public MissionInfo linkedMission;
+
+    [Header("Pig Display")]
+    public Vector3 pigScale = Vector3.one;
 }

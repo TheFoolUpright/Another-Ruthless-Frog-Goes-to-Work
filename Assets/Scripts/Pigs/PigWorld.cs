@@ -8,34 +8,38 @@ public class PigWorld : MonoBehaviour
     private PigRuntime pig;
     private NavMeshAgent agent;
     private StateMachine stateMachine;
+    private bool isInitialized;
 
-    [SerializeField] private MissionInfo debugMission; // assign in inspector for testing
+    [SerializeField] private MissionInfo debugMission;
     [SerializeField] private PigsScriptableObject debugPigData;
 
-
-    void Awake()
+    private void Awake()
     {
-        if (debugPigData == null)
-        {
-            //Debug.LogError("PigWorld is missing debugPigData", this);
-            return;
-        }
+        agent = GetComponent<NavMeshAgent>();
+        stateMachine = gameObject.AddComponent<StateMachine>();
+    }
 
-        PigRuntime testPig = new PigRuntime(debugPigData);
-        Initialize(testPig);
+    private void Start()
+    {
+        // Optional debug fallback only
+        if (!isInitialized && debugPigData != null)
+        {
+            PigRuntime testPig = new PigRuntime(debugPigData);
+
+            if (debugMission != null)
+            {
+                testPig.currentMission = debugMission;
+            }
+
+            Initialize(testPig);
+            GoToMission();
+        }
     }
 
     public void Initialize(PigRuntime pigRuntime)
     {
         pig = pigRuntime;
-
-        if (debugMission != null)
-        {
-            pig.currentMission = debugMission;
-        }
-
-        agent = GetComponent<NavMeshAgent>();
-        stateMachine = gameObject.AddComponent<StateMachine>();
+        isInitialized = true;
 
         var states = new Dictionary<Type, BaseState>()
         {
@@ -45,5 +49,21 @@ public class PigWorld : MonoBehaviour
         };
 
         stateMachine.SetStates(states);
+    }
+
+    public void GoToMission()
+    {
+        if (pig == null || !pig.HasMission())
+        {
+            Debug.LogWarning("PigWorld cannot go to mission because pig or mission is missing.");
+            return;
+        }
+
+        stateMachine.SwitchToNewState(typeof(onTravel));
+    }
+
+    public PigRuntime GetPig()
+    {
+        return pig;
     }
 }
