@@ -5,6 +5,8 @@ public class MissionClicking : MonoBehaviour
     public GameObject missionPopUpUIObject;
     public MissionPopupUI missionPopupUI;
     public MissionInfo missionInfo;
+    public bool missionClicked;
+    [SerializeField] private SpriteRenderer sprite;
 
     void Start()
     {
@@ -14,10 +16,13 @@ public class MissionClicking : MonoBehaviour
 
     void OnMouseDown()
     {
-        //if (!missionInfo.missionStarted)
+        if (!missionClicked)
         {
             missionPopUpUIObject.SetActive(true);
             missionPopUpUIObject.GetComponent<MissionPopupUI>().Open(missionInfo);
+            sprite.enabled = false;
+            missionClicked = true;
         }
+
     }
 }

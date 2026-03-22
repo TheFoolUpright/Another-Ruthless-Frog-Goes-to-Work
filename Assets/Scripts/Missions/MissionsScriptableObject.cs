@@ -17,20 +17,20 @@ public class MissionsScriptableObject : ScriptableObject
         switch(missionDangerLevel)
         {
             case 0:
-                missionPopUpCooldown = 3;
+                missionPopUpCooldown = 4;
                 missionProfessionalismRequirement = Random.Range(0, 4);
                 break;
             case 1:
-                missionPopUpCooldown = 6;
+                missionPopUpCooldown = 8;
                 missionProfessionalismRequirement = Random.Range(3, 7);
                 break;
             case 2:
-                missionPopUpCooldown = 9;
+                missionPopUpCooldown = 12;
                 missionProfessionalismRequirement = Random.Range(6, 10);
 
                 break;
             case 3:
-                missionPopUpCooldown = 12;
+                missionPopUpCooldown = 16;
                 missionProfessionalismRequirement = Random.Range(9, 13);
                 break;
             default:
