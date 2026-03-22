@@ -6,7 +6,13 @@ public class ReputationBarUI : MonoBehaviour
     [SerializeField] private RectTransform reputationBackground;
     [SerializeField] private RectTransform reputationFill;
     [SerializeField] private float maxTotalReputation = 400f;
+    [SerializeField] private PigInventoryController pigInventoryController;
+
+    [SerializeField] private float[] unlockThresholds = { 240f, 280f, 320f, 360f };
+
     public float totalReputationPercentage;
+    private float totalReputation;
+    private int nextUnlockIndex = 0;
 
     public void Update()
     {
@@ -15,7 +21,7 @@ public class ReputationBarUI : MonoBehaviour
 
     public void UpdateReputationBar()
     {
-        float totalReputation = 0f;
+        totalReputation = 0f;
 
         for (int i = 0; i < zones.Length; i++)
         {
@@ -35,6 +41,27 @@ public class ReputationBarUI : MonoBehaviour
         newSize.x = targetWidth;
         reputationFill.sizeDelta = newSize;
 
-        totalReputationPercentage = normalizedValue * 100;
+        totalReputationPercentage = normalizedValue * 100f;
+
+        CheckPigUnlocks();
+    }
+
+    private void CheckPigUnlocks()
+    {
+        if (pigInventoryController == null)
+        {
+            return;
+        }
+
+        if (nextUnlockIndex >= unlockThresholds.Length)
+        {
+            return;
+        }
+
+        if (totalReputation >= unlockThresholds[nextUnlockIndex])
+        {
+            pigInventoryController.UnlockNextPig();
+            nextUnlockIndex++;
+        }
     }
 }
