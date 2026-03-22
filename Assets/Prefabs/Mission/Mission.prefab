@@ -156,6 +156,7 @@ MonoBehaviour:
   missionGenerator: {fileID: 0}
   missionController: {fileID: 0}
   missionDangerLevel: 0
+  maxAssignedPigs: 4
 --- !u!114 &822423827693741230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,3 +169,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a2667b4d989d344ab26ddb3e4ddf74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  missionPopUpUIObject: {fileID: 0}
+  missionPopupUI: {fileID: 0}
+  missionInfo: {fileID: 564735922315746258}

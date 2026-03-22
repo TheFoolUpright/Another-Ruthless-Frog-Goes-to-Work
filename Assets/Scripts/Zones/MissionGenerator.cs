@@ -10,6 +10,7 @@ public class MissionGenerator : MonoBehaviour
     [SerializeField] private float reputationEffectOnMissionCount;
     [SerializeField] private float missionGenerationTimer;
     [SerializeField] private float reputationFactor;
+    public GameObject missionPopUpUIObject;
 
     public Transform[] missionWaypoints;
     public bool[] waypointOccupied;

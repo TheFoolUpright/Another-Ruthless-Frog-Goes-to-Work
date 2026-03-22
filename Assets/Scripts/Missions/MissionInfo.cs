@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class MissionInfo : MonoBehaviour
 {
+
+    public GameObject missionPopUpUIObject;
     public MissionsScriptableObject missionsScriptableObject;
     public MissionGenerator missionGenerator;
     public MissionController missionController;
@@ -14,6 +16,7 @@ public class MissionInfo : MonoBehaviour
     void Start()
     {
         DetermineSpecificMission();
+        missionPopUpUIObject = missionGenerator.missionPopUpUIObject;
     }
 
     public Transform GetTarget()
