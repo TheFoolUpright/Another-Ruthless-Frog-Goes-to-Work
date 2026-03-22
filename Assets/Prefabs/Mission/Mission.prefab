@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5462073669324562732}
   - component: {fileID: -7264904937372727217}
   - component: {fileID: 564735922315746258}
-  - component: {fileID: -6445315963786379453}
+  - component: {fileID: 822423827693741230}
   m_Layer: 0
   m_Name: Mission
   m_TagString: Untagged
@@ -156,7 +156,7 @@ MonoBehaviour:
   missionGenerator: {fileID: 0}
   missionController: {fileID: 0}
   missionDangerLevel: 0
---- !u!114 &-6445315963786379453
+--- !u!114 &822423827693741230
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,6 +165,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 739294885681261423}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ec5d3dba43e4134083b6e576d34c0da, type: 3}
+  m_Script: {fileID: 11500000, guid: 42a2667b4d989d344ab26ddb3e4ddf74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
