@@ -10,6 +10,7 @@ public class onHQ : BaseState
         this._pig = pig;
     }
 
+
     public override Type Tick()
     {
         if (_pig.HasMission())

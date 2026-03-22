@@ -47,13 +47,13 @@ public class PigInventoryController : MonoBehaviour
         {
             PigSlot slot = pigInventoryPanel.transform.GetChild(i).GetComponent<PigSlot>();
 
-            // Skip if already filled (important for future unlocks)
             if (slot.currentPig != null) continue;
 
             GameObject pigGO = Instantiate(pigPrefab, slot.transform);
             pigGO.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
 
             PigRuntime runtimePig = runtimePigs[i];
+            runtimePig.homeInventorySlot = slot;
 
             PigUI pigUI = pigGO.GetComponent<PigUI>();
             pigUI.Initialize(runtimePig);
@@ -84,6 +84,7 @@ public class PigInventoryController : MonoBehaviour
         pigGO.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
 
         PigRuntime runtimePig = runtimePigs[currentUnlockedCount];
+        runtimePig.homeInventorySlot = slot;
 
         PigUI pigUI = pigGO.GetComponent<PigUI>();
         pigUI.Initialize(runtimePig);

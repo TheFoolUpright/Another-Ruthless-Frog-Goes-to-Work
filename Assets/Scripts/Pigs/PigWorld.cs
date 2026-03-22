@@ -10,6 +10,8 @@ public class PigWorld : MonoBehaviour
     private StateMachine stateMachine;
     private bool isInitialized;
 
+    [SerializeField] private SpriteRenderer pigSpriteRenderer;
+
     [SerializeField] private MissionInfo debugMission;
     [SerializeField] private PigsScriptableObject debugPigData;
 
@@ -17,11 +19,15 @@ public class PigWorld : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         stateMachine = gameObject.AddComponent<StateMachine>();
+
+        if (pigSpriteRenderer == null)
+        {
+            pigSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        }
     }
 
     private void Start()
     {
-        // Optional debug fallback only
         if (!isInitialized && debugPigData != null)
         {
             PigRuntime testPig = new PigRuntime(debugPigData);
@@ -40,6 +46,15 @@ public class PigWorld : MonoBehaviour
     {
         pig = pigRuntime;
         isInitialized = true;
+
+        if (pigSpriteRenderer != null && pig != null && pig.data != null)
+        {
+            pigSpriteRenderer.sprite = pig.data.GetImage();
+        }
+        else
+        {
+            Debug.LogError("PigWorld could not assign sprite. Missing renderer or pig data.", this);
+        }
 
         var states = new Dictionary<Type, BaseState>()
         {
