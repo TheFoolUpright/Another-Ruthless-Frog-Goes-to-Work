@@ -3,12 +3,10 @@ using UnityEngine;
 
 public class MissionInfo : MonoBehaviour
 {
-
     public GameObject missionPopUpUIObject;
     public MissionsScriptableObject missionsScriptableObject;
     public MissionGenerator missionGenerator;
     public MissionController missionController;
-    public bool missionStarted;
     public int missionDangerLevel;
 
     public int maxAssignedPigs = 4;
@@ -37,6 +35,9 @@ public class MissionInfo : MonoBehaviour
 
         assignedPigs.Add(pig);
         pig.currentMission = this;
+
+        RefreshPopupUI();
+
         return true;
     }
 
@@ -50,12 +51,25 @@ public class MissionInfo : MonoBehaviour
             {
                 pig.currentMission = null;
             }
+
+            RefreshPopupUI();
         }
     }
 
     public bool ContainsPig(PigRuntime pig)
     {
         return assignedPigs.Contains(pig);
+    }
+
+    private void RefreshPopupUI()
+    {
+        if (missionPopUpUIObject == null) return;
+
+        MissionPopupUI popup = missionPopUpUIObject.GetComponent<MissionPopupUI>();
+        if (popup != null)
+        {
+            popup.RefreshStars();
+        }
     }
 
     void DetermineSpecificMission()

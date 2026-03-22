@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -7,6 +8,7 @@ public class PigDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     private PigSlot originalSlot;
     private CanvasGroup canvasGroup;
     private RectTransform rectTransform;
+    private bool canDrag = true;
 
     private void Start()
     {
@@ -14,8 +16,25 @@ public class PigDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         rectTransform = GetComponent<RectTransform>();
     }
 
+    public void SetDraggable(bool value)
+    {
+        canDrag = value;
+
+        if (canvasGroup != null)
+        {
+            canvasGroup.blocksRaycasts = value;
+        }
+    }
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if (!canDrag) return;
+
+        PigUI pigUI = GetComponent<PigUI>();
+        PigRuntime pig = pigUI.GetPig();
+
+        if (pig != null && pig.isDispatched)
+            return;
+
         originalParent = transform.parent;
         originalSlot = originalParent.GetComponent<PigSlot>();
 
@@ -28,11 +47,14 @@ public class PigDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (!canDrag) return;
         transform.position = eventData.position;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (!canDrag) return;
+
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1f;
 
@@ -98,7 +120,7 @@ public class PigDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
                 return false;
 
             fromSlot.currentPig = null;
-            transform.SetParent(toSlot.transform);
+            PlaceInSlot(toSlot);
             toSlot.currentPig = gameObject;
             return true;
         }
@@ -116,7 +138,7 @@ public class PigDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
             fromSlot.linkedMission.RemovePig(pig);
 
             fromSlot.currentPig = null;
-            transform.SetParent(toSlot.transform);
+            PlaceInSlot(toSlot);
             toSlot.currentPig = gameObject;
             return true;
         }
@@ -139,22 +161,38 @@ public class PigDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     {
         if (dropSlot.currentPig != null)
         {
-            dropSlot.currentPig.transform.SetParent(originalSlot.transform);
-            dropSlot.currentPig.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
-            originalSlot.currentPig = dropSlot.currentPig;
+            GameObject swappedPig = dropSlot.currentPig;
+
+            swappedPig.transform.SetParent(originalSlot.transform);
+            swappedPig.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+            swappedPig.GetComponent<RectTransform>().localScale = originalSlot.pigScale;
+
+            originalSlot.currentPig = swappedPig;
         }
         else
         {
             originalSlot.currentPig = null;
         }
 
-        transform.SetParent(dropSlot.transform);
+        PlaceInSlot(dropSlot);
         dropSlot.currentPig = gameObject;
+    }
+
+    private void PlaceInSlot(PigSlot slot)
+    {
+        transform.SetParent(slot.transform);
+        rectTransform.anchoredPosition = Vector2.zero;
+        rectTransform.localScale = slot.pigScale;
     }
 
     private void ReturnToOriginalSlot()
     {
         transform.SetParent(originalParent);
         rectTransform.anchoredPosition = Vector2.zero;
+
+        if (originalSlot != null)
+        {
+            rectTransform.localScale = originalSlot.pigScale;
+        }
     }
 }

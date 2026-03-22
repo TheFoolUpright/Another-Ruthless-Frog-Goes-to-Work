@@ -6,6 +6,9 @@ public class PigRuntime
     public float currentStamina;
     public MissionInfo currentMission;
 
+    public PigSlot homeInventorySlot;
+    public bool isDispatched;
+
     public PigRuntime(PigsScriptableObject data)
     {
         this.data = data;
@@ -24,5 +27,10 @@ public class PigRuntime
     public bool HasMission()
     {
         return currentMission != null;
+    }
+
+    public bool IsAvailable()
+    {
+        return !isDispatched;
     }
 }
