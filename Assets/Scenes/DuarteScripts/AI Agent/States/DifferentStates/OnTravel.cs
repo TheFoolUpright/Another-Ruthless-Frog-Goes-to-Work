@@ -24,6 +24,7 @@ public class onTravel : BaseState
 
     public override Type Tick()
     {
+
         if (!_pig.HasMission())
         {
             return typeof(onHQ);

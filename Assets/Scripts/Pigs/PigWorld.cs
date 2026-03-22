@@ -19,11 +19,16 @@ public class PigWorld : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         stateMachine = gameObject.AddComponent<StateMachine>();
+<<<<<<< Updated upstream
 
         if (pigSpriteRenderer == null)
         {
             pigSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
         }
+=======
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+>>>>>>> Stashed changes
     }
 
     private void Start()
