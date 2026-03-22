@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d12dee1632e5548419249056ef219893, type: 3}
-  m_Name: OilSpill
+  m_Name: Car Crash
   m_EditorClassIdentifier: Assembly-CSharp::MissionsScriptableObject
-  missionTitle: 
-  missionDescription: 
-  missionImage: {fileID: 0}
-  missionDangerLevel: 3
-  missionPopUpCooldown: 12
+  missionTitle: Car crash with injured civilians
+  missionDescription: A serious collision has occurred with multiple civilians injured.
+    Vehicles are damaged and blocking the road, with possible victims trapped inside.
+  missionImage: {fileID: 442433623218092415, guid: c6d3baa2d5387744491697198fdd5716, type: 3}
+  missionDangerLevel: 1
+  missionPopUpCooldown: 3
   missionCompletionTime: 6
-  missionProfessionalismRequirement: 11
+  missionProfessionalismRequirement: 3

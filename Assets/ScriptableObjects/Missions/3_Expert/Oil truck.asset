@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d12dee1632e5548419249056ef219893, type: 3}
-  m_Name: CarCrash
+  m_Name: Oil truck
   m_EditorClassIdentifier: Assembly-CSharp::MissionsScriptableObject
-  missionTitle: 
-  missionDescription: 
-  missionImage: {fileID: 0}
-  missionDangerLevel: 2
-  missionPopUpCooldown: 9
-  missionCompletionTime: 6
+  missionTitle: Oil truck accident
+  missionDescription: An oil transport truck has overturned, spilling hazardous material
+    onto the road. The area is dangerous, with risks of fire and environmental damage.
+  missionImage: {fileID: 5519070770504841804, guid: 9a6b9fac79dd6a043b87d48ef89dcb5e, type: 3}
+  missionDangerLevel: 3
+  missionPopUpCooldown: 12
+  missionCompletionTime: 18
   missionProfessionalismRequirement: 9

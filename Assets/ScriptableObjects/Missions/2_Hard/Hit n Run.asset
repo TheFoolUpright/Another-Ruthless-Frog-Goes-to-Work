@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d12dee1632e5548419249056ef219893, type: 3}
+  m_Name: Hit n Run
+  m_EditorClassIdentifier: Assembly-CSharp::MissionsScriptableObject
+  missionTitle: Hit and Run
+  missionDescription: A pedestrian was struck by a vehicle that fled the scene. The
+    suspect is still at large, and the victim requires immediate assistance.
+  missionImage: {fileID: -5486490185852665041, guid: f2abe56989fcecf4a9f6e7431934b140, type: 3}
+  missionDangerLevel: 2
+  missionPopUpCooldown: 9
+  missionCompletionTime: 16
+  missionProfessionalismRequirement: 8

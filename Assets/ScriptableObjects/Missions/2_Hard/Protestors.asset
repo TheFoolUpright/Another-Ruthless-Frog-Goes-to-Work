@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d12dee1632e5548419249056ef219893, type: 3}
-  m_Name: TrafficJam
+  m_Name: Protestors
   m_EditorClassIdentifier: Assembly-CSharp::MissionsScriptableObject
-  missionTitle: Traffic Jam Patrol
-  missionDescription: A family of ducks has wandered onto a main road, forcing vehicles
-    to stop. One lane is blocked and traffic is quickly getting worse as drivers
-    wait.
-  missionImage: {fileID: -5191161525368512533, guid: db4b852f4dbc4ed4abb4b1d7c5a8edad, type: 3}
+  missionTitle: 'Protestors on the Road '
+  missionDescription: A group of protestors has blocked a major road, stopping traffic
+    completely. The situation is tense as drivers become increasingly frustrated.
+  missionImage: {fileID: -5486490185852665041, guid: f2abe56989fcecf4a9f6e7431934b140, type: 3}
   missionDangerLevel: 0
   missionPopUpCooldown: 3
-  missionCompletionTime: 0
+  missionCompletionTime: 2
   missionProfessionalismRequirement: 1

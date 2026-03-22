@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d12dee1632e5548419249056ef219893, type: 3}
+  m_Name: Gang Violence
+  m_EditorClassIdentifier: Assembly-CSharp::MissionsScriptableObject
+  missionTitle: Gang-shoot on cars!
+  missionDescription: Multiple vehicles are involved in a gang-related shootout while
+    driving. Gunfire has been reported, and civilians in the area are in immediate
+    danger.
+  missionImage: {fileID: 5519070770504841804, guid: 9a6b9fac79dd6a043b87d48ef89dcb5e, type: 3}
+  missionDangerLevel: 3
+  missionPopUpCooldown: 12
+  missionCompletionTime: 22
+  missionProfessionalismRequirement: 11
