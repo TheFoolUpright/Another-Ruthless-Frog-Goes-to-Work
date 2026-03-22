@@ -31,6 +31,6 @@ public class UITextReputation : MonoBehaviour
             return;
         }
 
-        reputationText.text = "%" + zonePrefab.zone.zoneReputation.ToString();
+        reputationText.text = zonePrefab.zone.zoneReputation.ToString() + "%";
     }
 }
