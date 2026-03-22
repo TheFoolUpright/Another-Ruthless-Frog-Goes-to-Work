@@ -17,7 +17,7 @@ public class PigWorld : MonoBehaviour
     {
         if (debugPigData == null)
         {
-            Debug.LogError("PigWorld is missing debugPigData", this);
+            //Debug.LogError("PigWorld is missing debugPigData", this);
             return;
         }
 

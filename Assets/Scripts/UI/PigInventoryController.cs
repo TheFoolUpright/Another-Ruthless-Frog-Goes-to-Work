@@ -20,7 +20,9 @@ public class PigInventoryController : MonoBehaviour
         // Create slots
         for (int i = 0; i < slotCount; i++)
         {
-            Instantiate(slotPrefab, pigInventoryPanel.transform);
+            GameObject slotGO = Instantiate(slotPrefab, pigInventoryPanel.transform);
+            PigSlot slot = slotGO.GetComponent<PigSlot>();
+            slot.slotType = PigSlot.SlotType.Inventory;
         }
 
         // Copy and shuffle pigs

@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d12dee1632e5548419249056ef219893, type: 3}
-  m_Name: Argument
+  m_Name: TrafficJam
   m_EditorClassIdentifier: Assembly-CSharp::MissionsScriptableObject
-  missionTitle: Small Crash and Argument
-  missionDescription: "Two civilians collided on Avenida Dom Jo\xE3o II. No major
-    injuries reported, but both drivers are arguing over who is at fault, blocking
-    part of the road and causing traffic to build up."
+  missionTitle: Traffic Jam Patrol
+  missionDescription: A family of ducks has wandered onto a main road, forcing vehicles
+    to stop. One lane is blocked and traffic is quickly getting worse as drivers
+    wait.
   missionImage: {fileID: 0}
   missionDangerLevel: 0
   missionPopUpCooldown: 3
-  missionCompletionTime: 2
-  missionProfessionalismRequirement: 1
+  missionCompletionTime: 4
+  missionProfessionalismRequirement: 2

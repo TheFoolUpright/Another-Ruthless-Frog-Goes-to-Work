@@ -880,6 +880,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &96667088 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6773163752706239189, guid: cb66693ba109a764589ae1c8eb4594ae, type: 3}
+  m_PrefabInstance: {fileID: 958378123}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd3c9c7d1910564bb914e0c73773f32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PigSlot
 --- !u!1 &96938099
 GameObject:
   m_ObjectHideFlags: 0
@@ -5546,6 +5557,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &613139385 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5427128073662465621, guid: cb66693ba109a764589ae1c8eb4594ae, type: 3}
+  m_PrefabInstance: {fileID: 958378123}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &656751930
 GameObject:
   m_ObjectHideFlags: 0
@@ -7440,6 +7462,7 @@ MonoBehaviour:
   missionGenerator: {fileID: 0}
   missionController: {fileID: 774610585}
   missionDangerLevel: 0
+  maxAssignedPigs: 4
 --- !u!212 &836410173
 SpriteRenderer:
   serializedVersion: 2
@@ -8517,6 +8540,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &922860739 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4467108406388048155, guid: cb66693ba109a764589ae1c8eb4594ae, type: 3}
+  m_PrefabInstance: {fileID: 958378123}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd3c9c7d1910564bb914e0c73773f32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PigSlot
 --- !u!1 &925778485
 GameObject:
   m_ObjectHideFlags: 0
@@ -8901,10 +8935,65 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2002994232641956129, guid: cb66693ba109a764589ae1c8eb4594ae, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 2002994232641956129, guid: cb66693ba109a764589ae1c8eb4594ae, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 2008829655606278895, guid: cb66693ba109a764589ae1c8eb4594ae, type: 3}
+      propertyPath: slotType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3894353664544367030, guid: cb66693ba109a764589ae1c8eb4594ae, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 3894353664544367030, guid: cb66693ba109a764589ae1c8eb4594ae, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902190198364140152, guid: cb66693ba109a764589ae1c8eb4594ae, type: 3}
+      propertyPath: slotType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454763875014988501, guid: cb66693ba109a764589ae1c8eb4594ae, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454763875014988501, guid: cb66693ba109a764589ae1c8eb4594ae, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 4467108406388048155, guid: cb66693ba109a764589ae1c8eb4594ae, type: 3}
+      propertyPath: slotType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831684311480391160, guid: cb66693ba109a764589ae1c8eb4594ae, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760967117806401819, guid: cb66693ba109a764589ae1c8eb4594ae, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760967117806401819, guid: cb66693ba109a764589ae1c8eb4594ae, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773163752706239189, guid: cb66693ba109a764589ae1c8eb4594ae, type: 3}
+      propertyPath: slotType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5831684311480391160, guid: cb66693ba109a764589ae1c8eb4594ae, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2078281146}
   m_SourcePrefab: {fileID: 100100000, guid: cb66693ba109a764589ae1c8eb4594ae, type: 3}
 --- !u!1 &962082566
 GameObject:
@@ -9014,6 +9103,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &966614745 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3233598274799160131, guid: cb66693ba109a764589ae1c8eb4594ae, type: 3}
+  m_PrefabInstance: {fileID: 958378123}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &969127780
 GameObject:
   m_ObjectHideFlags: 0
@@ -10982,6 +11082,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1131525162 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3902190198364140152, guid: cb66693ba109a764589ae1c8eb4594ae, type: 3}
+  m_PrefabInstance: {fileID: 958378123}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd3c9c7d1910564bb914e0c73773f32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PigSlot
 --- !u!1 &1143464261
 GameObject:
   m_ObjectHideFlags: 0
@@ -14202,6 +14313,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1450934834 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2008829655606278895, guid: cb66693ba109a764589ae1c8eb4594ae, type: 3}
+  m_PrefabInstance: {fileID: 958378123}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd3c9c7d1910564bb914e0c73773f32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PigSlot
 --- !u!1 &1451957047
 GameObject:
   m_ObjectHideFlags: 0
@@ -18214,6 +18336,28 @@ Transform:
   - {fileID: 1813196703}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1954722612 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8827149985734707983, guid: cb66693ba109a764589ae1c8eb4594ae, type: 3}
+  m_PrefabInstance: {fileID: 958378123}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &1960844421 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5005195612211957579, guid: cb66693ba109a764589ae1c8eb4594ae, type: 3}
+  m_PrefabInstance: {fileID: 958378123}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &2000663635
 GameObject:
   m_ObjectHideFlags: 0
@@ -19156,8 +19300,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f81fa91b7faccf4dbf29273d9b51288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PigWorld
+  debugMission: {fileID: 0}
+  debugPigData: {fileID: 0}
+--- !u!1 &2078281142 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5831684311480391160, guid: cb66693ba109a764589ae1c8eb4594ae, type: 3}
+  m_PrefabInstance: {fileID: 958378123}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2078281146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078281142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 976966ed13aabac40a629f319b62caeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MissionPopupUI
+  popupRoot: {fileID: 2078281142}
+  missionTitleText: {fileID: 1954722612}
+  missionDescriptionText: {fileID: 1960844421}
+  missionImage: {fileID: 966614745}
+  professionalismText: {fileID: 613139385}
+  missionSlots:
+  - {fileID: 96667088}
+  - {fileID: 1450934834}
+  - {fileID: 922860739}
+  - {fileID: 1131525162}
   debugMission: {fileID: 836410172}
-  debugPigData: {fileID: 11400000, guid: 59eb64efc491a234aa4ee94faf3d743d, type: 2}
 --- !u!1 &2087658379
 GameObject:
   m_ObjectHideFlags: 0
