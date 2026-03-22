@@ -83,15 +83,15 @@ public class MissionGenerator : MonoBehaviour
                 break;
 
             case 1:
-                missionDangerLevel = Mathf.FloorToInt(NextGaussian(1 + reputationFactor, 4, 0f, 3.9f));
+                missionDangerLevel = Mathf.FloorToInt(NextGaussian(1 + reputationFactor, 2, 0f, 3.9f));
                 break;
 
             case 2:
-                missionDangerLevel = Mathf.FloorToInt(NextGaussian(2 + reputationFactor, 4, 0f, 3.9f));
+                missionDangerLevel = Mathf.FloorToInt(NextGaussian(2 + reputationFactor, 1, 0f, 3.9f));
                 break;
 
             case 3:
-                missionDangerLevel = Mathf.FloorToInt(NextGaussian(3 + reputationFactor, 4, 0f, 3.9f));
+                missionDangerLevel = Mathf.FloorToInt(NextGaussian(3 + reputationFactor, 0.5f, 0f, 3.9f));
                 break;
 
             default:

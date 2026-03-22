@@ -1105,6 +1105,10 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8804193596186759473, guid: ce21d335eae66de49b73a8c865b4dd21, type: 3}
+      propertyPath: reputationBarUI
+      value: 
+      objectReference: {fileID: 2112796084}
+    - target: {fileID: 8804193596186759473, guid: ce21d335eae66de49b73a8c865b4dd21, type: 3}
       propertyPath: missionController
       value: 
       objectReference: {fileID: 1688311205}
@@ -6445,6 +6449,10 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5606454629113765115, guid: 48fa7dc1c72a59e4d9afe5b83b4dba05, type: 3}
+      propertyPath: reputationBarUI
+      value: 
+      objectReference: {fileID: 2112796084}
+    - target: {fileID: 5606454629113765115, guid: 48fa7dc1c72a59e4d9afe5b83b4dba05, type: 3}
       propertyPath: missionController
       value: 
       objectReference: {fileID: 1688311205}
@@ -6637,6 +6645,10 @@ PrefabInstance:
       propertyPath: zoneReputation
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 4192785571026833251, guid: 30f9d0d1d0802624eb081ecd821544cc, type: 3}
+      propertyPath: reputationBarUI
+      value: 
+      objectReference: {fileID: 2112796084}
     - target: {fileID: 4192785571026833251, guid: 30f9d0d1d0802624eb081ecd821544cc, type: 3}
       propertyPath: missionController
       value: 
@@ -9986,6 +9998,10 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1548276342823129954, guid: 13187b28ea0939a4b87edf1e9ead489a, type: 3}
+      propertyPath: reputationBarUI
+      value: 
+      objectReference: {fileID: 2112796084}
+    - target: {fileID: 1548276342823129954, guid: 13187b28ea0939a4b87edf1e9ead489a, type: 3}
       propertyPath: missionController
       value: 
       objectReference: {fileID: 1688311205}
@@ -10479,64 +10495,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!1001 &1167693395
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1237674182397463553, guid: 460bf41e2f74f0845a589be5b027d4a8, type: 3}
-      propertyPath: m_Name
-      value: PigWorld
-      objectReference: {fileID: 0}
-    - target: {fileID: 7440398417935782155, guid: 460bf41e2f74f0845a589be5b027d4a8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7440398417935782155, guid: 460bf41e2f74f0845a589be5b027d4a8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.14
-      objectReference: {fileID: 0}
-    - target: {fileID: 7440398417935782155, guid: 460bf41e2f74f0845a589be5b027d4a8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7440398417935782155, guid: 460bf41e2f74f0845a589be5b027d4a8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7440398417935782155, guid: 460bf41e2f74f0845a589be5b027d4a8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7440398417935782155, guid: 460bf41e2f74f0845a589be5b027d4a8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7440398417935782155, guid: 460bf41e2f74f0845a589be5b027d4a8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7440398417935782155, guid: 460bf41e2f74f0845a589be5b027d4a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7440398417935782155, guid: 460bf41e2f74f0845a589be5b027d4a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7440398417935782155, guid: 460bf41e2f74f0845a589be5b027d4a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3895478189518721115, guid: 460bf41e2f74f0845a589be5b027d4a8, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 460bf41e2f74f0845a589be5b027d4a8, type: 3}
 --- !u!1 &1173917149
 GameObject:
   m_ObjectHideFlags: 0
@@ -19556,6 +19514,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &2112796084 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8917334938802323077, guid: 3e5b64636a2f4bc4bab14f4ae7a809ac, type: 3}
+  m_PrefabInstance: {fileID: 845016155}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9f1ec8c6e2e0146a12bf7e8e2513c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReputationBarUI
 --- !u!1 &2143593793
 GameObject:
   m_ObjectHideFlags: 0
@@ -19674,7 +19643,6 @@ SceneRoots:
   - {fileID: 426159170}
   - {fileID: 281316218}
   - {fileID: 1110845006}
-  - {fileID: 1167693395}
   - {fileID: 1688311204}
   - {fileID: 369282624}
   - {fileID: 845016155}
