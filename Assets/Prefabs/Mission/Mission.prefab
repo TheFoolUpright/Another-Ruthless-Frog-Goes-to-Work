@@ -152,10 +152,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d075c17344c36647a4d390ee80291e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  missionPopUpUIObject: {fileID: 0}
   missionsScriptableObject: {fileID: 0}
   missionGenerator: {fileID: 0}
   missionController: {fileID: 0}
+  missionStartedAtLocation: 0
+  missionDuration: 0
+  missionDurationTimer: 0
+  missionPopUpCooldownTimer: 0
   missionDangerLevel: 0
+  missionOver: 0
+  pigProfessionalism: 0
   maxAssignedPigs: 4
 --- !u!114 &822423827693741230
 MonoBehaviour:
@@ -172,3 +179,5 @@ MonoBehaviour:
   missionPopUpUIObject: {fileID: 0}
   missionPopupUI: {fileID: 0}
   missionInfo: {fileID: 564735922315746258}
+  missionClicked: 0
+  sprite: {fileID: 5462073669324562732}

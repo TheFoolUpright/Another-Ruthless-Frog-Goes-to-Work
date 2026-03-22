@@ -20,6 +20,7 @@ public class MissionClicking : MonoBehaviour
         {
             missionPopUpUIObject.SetActive(true);
             missionPopUpUIObject.GetComponent<MissionPopupUI>().Open(missionInfo);
+            missionInfo.missionPopUpOpened = true;
             sprite.enabled = false;
             missionClicked = true;
         }

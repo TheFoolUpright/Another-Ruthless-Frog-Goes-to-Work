@@ -14,6 +14,7 @@ public class MissionInfo : MonoBehaviour
     public int missionDangerLevel;
     public bool missionOver;
     public int pigProfessionalism;
+    public bool missionPopUpOpened;
 
     public int maxAssignedPigs = 4;
     public List<PigRuntime> assignedPigs = new List<PigRuntime>();
@@ -28,16 +29,36 @@ public class MissionInfo : MonoBehaviour
 
     private void Update()
     {
-        if (missionPopUpCooldownTimer > 0)
+        if (!missionPopUpOpened)
         {
-            missionPopUpCooldownTimer -= Time.deltaTime;
-        }
-        else
-        {
+            if (missionPopUpCooldownTimer > 0)
+            {
+                missionPopUpCooldownTimer -= Time.deltaTime;
+            }
+            else
+            {
+                switch (missionDangerLevel)
+                {
+                    case 0:
+                        missionGenerator.zoneReputation = Mathf.Clamp(missionGenerator.zoneReputation - 5, 0, 100);
+                        break;
+                    case 1:
+                        missionGenerator.zoneReputation = Mathf.Clamp(missionGenerator.zoneReputation - 10, 0, 100);
+                        break;
+                    case 2:
+                        missionGenerator.zoneReputation = Mathf.Clamp(missionGenerator.zoneReputation - 15, 0, 100);
+                        break;
+                    case 3:
+                        missionGenerator.zoneReputation = Mathf.Clamp(missionGenerator.zoneReputation - 20, 0, 100);
+                        break;
+                }
+                missionController.activeMissionList.Remove(missionsScriptableObject);
+                Destroy(gameObject);
 
+            }
         }
 
-            MissionResult();
+        MissionResult();
     }
 
     public Transform GetTarget()
